@@ -5,37 +5,22 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie-edge">
         <title>讚星首頁</title>
-
+        <link rel="stylesheet" href="/css/icon/style.css">
+        <link rel="stylesheet" href="/css/owl.carousel.min.css">
+        <link rel="stylesheet" href="/css/owl.theme.default.min.css">
+        <link rel="stylesheet" href="/css/reset.css">        
+        <link rel="stylesheet" href="/css/indexStyle.css">
         <style>
-            /* 預設 */
-            body {
-                margin: 0;
-            }
-            button {
-                border: none;
-                background-color: rgba(255,255,255,0);
-                padding: 0;
-                cursor: pointer;
-            }
-            a {
-                color: #000;
-                text-decoration: none;
-            }
-            ul,li {
-                padding: 0;
-                list-style: none;
-            }
-            h1,h2,h3,h4,h5,h6,ul,p {
-                margin: 0;
-            }
+            /* 預設 */            
 
             /* video設定 */
-            .videowh {
+            /* .videowh {
                 padding-bottom: 56.25%;
                 height: 0;
                 background: #159;
                 position: relative;
                 overflow: hidden;
+                position: relative;
             }
             .videowh iframe {
                 position: absolute;
@@ -43,10 +28,96 @@
                 height: 100%;
                 top: 0;
                 left: 0;
+            } */
+
+            /* 內容 */       
+
+            
+            /* 黑幕 */     
+            /* .videowh::before {
+                content: '';
+                display: block;      
+                width: 100%;
+                height:  100%;        
+                background-color: rgba(0,0,0,.8);
+                position: absolute;
+                z-index: 1;
+            }
+            .mainHeader {
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+                height: 80px;
+                padding: 0 30px;
+                position: fixed;
+                top: 0;
+                left: 0;
+                z-index: 1;
+            } */
+            .mainVideo-newsletter {   
+                display: flex;                
+                flex-direction: column;
+                justify-content: center;
+                width: 450px;
+                height: 100%;      
+                position: absolute;
+                top: 0;
+                left: 20%;
+                z-index: 1;
+                /* background-color: #159; */
+            }
+            .mV-newsletter-title {
+                color: #fff;
+                font-size: 18px;
+                letter-spacing: 1px;
+                font-weight: 100;
+            }
+            .mV-newsletter-title::after {
+                content: '';
+                display: inline-block;
+                width: calc(100% - 100px);
+                border-bottom: 1px solid #fff;
+                margin-left: 15px;
+                vertical-align:super;
+            }
+            .mV-newsletter-carousel {
+                position: relative;
+            }
+            .mV-newsletter-content {
+                padding: 25px 20px;
+                color: #fff;
+            }
+            .mV-newsletter-day {
+                font-size: 65px;
+                font-weight: bold;
+                /* letter-spacing: 20px; */
+                font-family: Arial;
             }
 
-            /* 內容 */
-            
+            .mV-newsletter-carousel button.owl-dots {
+                width: 30px;
+                height: 5px;
+                background-color: rgba(126, 196, 186, 0.35);
+                border-radius: 5px;
+                margin-right: 10px;
+            }
+            .mV-newsletter-carousel .owl-carousel button.owl-dot {
+                width: 30px;
+                height: 5px;
+                background-color: rgba(126, 196, 186, 0.35);
+                border-radius: 5px;
+                margin-right: 10px;
+            }
+            .mV-newsletter-carousel .owl-carousel button.owl-dot:hover {
+                background-color: rgb(126, 196, 186);
+            }
+            @media screen and (max-width: 1024px) {                
+                 
+            }
+
+            @media screen and (max-width: 480px) {
+               
+            }
         </style>
     </head>
     <body>
@@ -65,30 +136,77 @@
             <div class="videowh">
                 <iframe width="100%" height="auto" src="https://www.youtube.com/embed/FQeinhsTc9E?&autoplay=1&loop=1&disablekb=0&controls=0&fs=0&iv_load_policy=3&rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
-            <header>
-                <h1 id="logo">
-                    <a href=""></a>
-                </h1>
-                <nav id="header-menu">
-                    <ul>
+            <header class="mainHeader">                
+                <nav class="logoNmenu">
+                    <h1 id="logo">
+                        <a href="#"></a>
+                    </h1>
+                    <ul id="header-menu">
                         <li>
-                            <a href=""></a>
+                            <a href="#">首頁</a>
+                        </li>
+                        <li>
+                            <a href="#">節目</a>
                         </li>
                     </ul>
                 </nav>
                 <div id="header-icon">
-                    <span class=""></span>
+                    <span class="icon-Menu header-icon-menu"></span>
+                    <span class="icon-Profile header-icon-profile phone-header-icon"></span>
+                    <span class="icon-Heart header-icon-heart phone-header-icon"></span>
+                    <span class="icon-Comment header-icon-cmment phone-header-icon"></span>
                 </div>
             </header>
             <nav class="sideNav">
                 <ul>
                     <li>
-                        <a href=""></a>
-                        <span></span>
+                        <a href="#"></a>
+                        <span>TOP</span>
+                    </li>
+                    <li>
+                        <a href="#"></a>
+                        <span>賽事</span>
+                    </li>
+                    <li>
+                        <a href="#"></a>
+                        <span>節目表</span>
+                    </li>
+                    <li>
+                        <a href="#"></a>
+                        <span>熱門推薦</span>
+                    </li>
+                    <li>
+                        <a href="#"></a>
+                        <span>快訊</span>
+                    </li>
+                    <li>
+                        <a href="#"></a>
+                        <span>體育熱播</span>
+                    </li>
+                    <li>
+                        <a href="#"></a>
+                        <span>Footer</span>
                     </li>
                 </ul>
             </nav>
-            <div class="mainVideo-newsletter"></div>
+            <div class="mainVideo-newsletter">
+                <div>
+                    <h3 class="mV-newsletter-title">最新快訊</h3>
+                    <div class="owl-carousel mV-newsletter-carousel">
+                        <div class="mV-newsletter-content">
+                            <p class="mV-newsletter-day">6 / 18</p>
+                            <p class="mV-newsletter-time">14:00</p>
+                            <p class="mV-newsletter-text">公告 標題的字數最多只能顯示十五個字</p>
+                        </div>
+                        <div> 1 Your Content </div>
+                        <div> 2 Your Content </div>
+                        <div> 3 Your Content </div>
+                        <div> 4 Your Content </div>
+                        <div> 5 Your Content </div>
+                        <div> 6 Your Content </div>
+                    </div>
+                </div>
+            </div>
             <div class="mainVideo-recommend"></div>
             <div class="mainVideo-video"></div>
         </section>
@@ -105,4 +223,21 @@
         <!-- 頁尾 -->
         <footer></footer>
     </body>
+    
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/owl.carousel.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".owl-carousel").owlCarousel({
+                items:1,
+                // margin:10,
+                // autoHeight:true,
+                animateOut: 'fadeOut',
+                animateIn: 'fadeIn',
+                // autoplay: true,
+                // nav: true,
+                // dots: true,
+            });
+        });
+    </script>
 </html>

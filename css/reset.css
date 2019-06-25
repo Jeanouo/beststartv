@@ -1,0 +1,26 @@
+ /* 預設 */
+* {
+    box-sizing: border-box;
+    font-family: "微軟正黑體",Arial, Helvetica, sans-serif;
+}
+body {
+    margin: 0;
+}
+button {
+    border: none;
+    background-color: rgba(255,255,255,0);
+    padding: 0;
+    cursor: pointer;
+}
+a {
+    display: block;
+    color: #000;
+    text-decoration: none;
+}
+ul,li {
+    padding: 0;
+    list-style: none;
+}
+h1,h2,h3,h4,h5,h6,ul,p {
+    margin: 0;
+}
