@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie-edge">
+        <title>讚星首頁</title>
+
+        <style>
+            /* 預設 */
+            body {
+                margin: 0;
+            }
+            button {
+                border: none;
+                background-color: rgba(255,255,255,0);
+                padding: 0;
+                cursor: pointer;
+            }
+            a {
+                color: #000;
+                text-decoration: none;
+            }
+            ul,li {
+                padding: 0;
+                list-style: none;
+            }
+            h1,h2,h3,h4,h5,h6,ul,p {
+                margin: 0;
+            }
+
+            /* video設定 */
+            .videowh {
+                padding-bottom: 56.25%;
+                height: 0;
+                background: #159;
+                position: relative;
+                overflow: hidden;
+            }
+            .videowh iframe {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+            }
+
+            /* 內容 */
+            
+        </style>
+    </head>
+    <body>
+        <!-- 主影片 -->
+        <!-- 
+        自動撥放 autoplay=1
+        輪播(AS3才有用) loop=1
+        從..秒 開始撥放 start=33
+        用鍵盤控制影片 disablekb=0
+        不顯示控制區 controls=0
+        不顯示全屏按鈕 fs=0
+        不顯示結束相關視頻 rel=0 
+        不顯示是頻註釋(1 顯示) iv_load_policy=3
+        -->
+        <section id="mainVideo">
+            <div class="videowh">
+                <iframe width="100%" height="auto" src="https://www.youtube.com/embed/FQeinhsTc9E?&autoplay=1&loop=1&disablekb=0&controls=0&fs=0&iv_load_policy=3&rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <header>
+                <h1 id="logo">
+                    <a href=""></a>
+                </h1>
+                <nav id="header-menu">
+                    <ul>
+                        <li>
+                            <a href=""></a>
+                        </li>
+                    </ul>
+                </nav>
+                <div id="header-icon">
+                    <span class=""></span>
+                </div>
+            </header>
+            <nav class="sideNav">
+                <ul>
+                    <li>
+                        <a href=""></a>
+                        <span></span>
+                    </li>
+                </ul>
+            </nav>
+            <div class="mainVideo-newsletter"></div>
+            <div class="mainVideo-recommend"></div>
+            <div class="mainVideo-video"></div>
+        </section>
+        <!-- 賽事 -->
+        <section id="event"></section>
+        <!-- 節目表 -->
+        <section id="program"></section>
+        <!-- 快訊 -->
+        <section id="newsletter"></section>
+        <!-- 熱門推薦 -->
+        <section id="recommend"></section>
+        <!-- 熱播 -->
+        <section id="hotBroadcast"></section>
+        <!-- 頁尾 -->
+        <footer></footer>
+    </body>
+</html>
