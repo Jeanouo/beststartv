@@ -84,7 +84,8 @@
                 position: relative;
             }
             .mV-newsletter-content {
-                padding: 25px 20px;
+                /* padding: 25px 20px; */
+                padding: 25px 0;
                 color: #fff;
             }
             .mV-newsletter-day {
@@ -92,6 +93,15 @@
                 font-weight: bold;
                 /* letter-spacing: 20px; */
                 font-family: Arial;
+            }
+            .mV-newsletter-time {
+                font-size: 18px;
+                letter-spacing: 3px;
+                padding: 10px 0 15px 0;
+            }
+            .mV-newsletter-text {                
+                font-size: 18px;
+                letter-spacing: 1px;
             }
 
             .mV-newsletter-carousel button.owl-dots {
@@ -111,6 +121,35 @@
             .mV-newsletter-carousel .owl-carousel button.owl-dot:hover {
                 background-color: rgb(126, 196, 186);
             }
+            
+
+            
+
+            #event {
+                height: 1000px;
+                background: rgb(110, 157, 218);
+            }
+            #program {
+                height: 1000px;
+                background: rgb(153, 17, 17);
+            }
+            #newsletter {
+                height: 1000px;
+                background: #aa6;
+            }
+            #recommend {
+                height: 1000px;
+                background: #75a;
+            }
+            #hotBroadcast {
+                height: 1000px;
+                background: #1a9;
+            }
+            #footer {
+                height: 1000px;
+                background: rgb(204, 142, 173);
+            }
+
             @media screen and (max-width: 1024px) {                
                  
             }
@@ -151,40 +190,40 @@
                     </ul>
                 </nav>
                 <div id="header-icon">
-                    <span class="icon-Menu header-icon-menu"></span>
-                    <span class="icon-Profile header-icon-profile phone-header-icon"></span>
-                    <span class="icon-Heart header-icon-heart phone-header-icon"></span>
-                    <span class="icon-Comment header-icon-cmment phone-header-icon"></span>
+                    <span class="icon-Menu header-icon-menu icon-size"></span>
+                    <span class="icon-Profile header-icon-profile icon-size phone-header-icon"></span>
+                    <span class="icon-Heart header-icon-heart icon-size phone-header-icon"></span>
+                    <span class="icon-Comment header-icon-cmment icon-size phone-header-icon"></span>
                 </div>
             </header>
             <nav class="sideNav">
                 <ul>
                     <li>
-                        <a href="#"></a>
+                        <a data-target="#mainVideo"></a>
                         <span>TOP</span>
                     </li>
                     <li>
-                        <a href="#"></a>
+                        <a data-target="#event"></a>
                         <span>賽事</span>
                     </li>
                     <li>
-                        <a href="#"></a>
+                        <a data-target="#program"></a>
                         <span>節目表</span>
                     </li>
                     <li>
-                        <a href="#"></a>
+                        <a data-target="#recommend"></a>
                         <span>熱門推薦</span>
                     </li>
                     <li>
-                        <a href="#"></a>
+                        <a data-target="#newsletter"></a>
                         <span>快訊</span>
                     </li>
                     <li>
-                        <a href="#"></a>
+                        <a data-target="#hotBroadcast"></a>
                         <span>體育熱播</span>
                     </li>
                     <li>
-                        <a href="#"></a>
+                        <a data-target="#footer"></a>
                         <span>Footer</span>
                     </li>
                 </ul>
@@ -198,12 +237,26 @@
                             <p class="mV-newsletter-time">14:00</p>
                             <p class="mV-newsletter-text">公告 標題的字數最多只能顯示十五個字</p>
                         </div>
-                        <div> 1 Your Content </div>
-                        <div> 2 Your Content </div>
-                        <div> 3 Your Content </div>
-                        <div> 4 Your Content </div>
-                        <div> 5 Your Content </div>
-                        <div> 6 Your Content </div>
+                        <div class="mV-newsletter-content">
+                            <p class="mV-newsletter-day">6 / 20</p>
+                            <p class="mV-newsletter-time">14:00</p>
+                            <p class="mV-newsletter-text">公告 標題的字數最多只能顯示十五個字</p>
+                        </div>
+                        <div class="mV-newsletter-content">
+                            <p class="mV-newsletter-day">6 / 30</p>
+                            <p class="mV-newsletter-time">14:00</p>
+                            <p class="mV-newsletter-text">公告 標題的字數最多只能顯示十五個字</p>
+                        </div>
+                        <div class="mV-newsletter-content">
+                            <p class="mV-newsletter-day">7 / 8</p>
+                            <p class="mV-newsletter-time">14:00</p>
+                            <p class="mV-newsletter-text">公告 標題的字數最多只能顯示十五個字</p>
+                        </div>
+                        <div class="mV-newsletter-content">
+                            <p class="mV-newsletter-day">7 / 12</p>
+                            <p class="mV-newsletter-time">14:00</p>
+                            <p class="mV-newsletter-text">公告 標題的字數最多只能顯示十五個字</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -214,27 +267,44 @@
         <section id="event"></section>
         <!-- 節目表 -->
         <section id="program"></section>
-        <!-- 快訊 -->
-        <section id="newsletter"></section>
         <!-- 熱門推薦 -->
         <section id="recommend"></section>
+        <!-- 快訊 -->
+        <section id="newsletter"></section>
         <!-- 熱播 -->
         <section id="hotBroadcast"></section>
         <!-- 頁尾 -->
-        <footer></footer>
+        <footer id="footer"></footer>
     </body>
     
     <script src="/js/jquery.min.js"></script>
     <script src="/js/owl.carousel.min.js"></script>
-    <script>
+    <script> 
         $(document).ready(function(){
+
+            setTimeout(function(){
+                $('.sideNav a:first').addClass('onClickContent');
+            }, 1000);            
+            setTimeout(function(){
+                $('.sideNav a:first').removeClass('onClickContent');
+            }, 5000);
+
+            $('.sideNav a').click(function () {                
+                $('.sideNav a').removeClass('onClickContent');
+                var dot = $(this).data('target');
+                $('html,body').delay(200).animate({
+                    scrollTop: $(dot).offset().top
+                },1000);
+                $(this).addClass('onClickContent');
+            });
+                        
             $(".owl-carousel").owlCarousel({
                 items:1,
                 // margin:10,
                 // autoHeight:true,
                 animateOut: 'fadeOut',
                 animateIn: 'fadeIn',
-                // autoplay: true,
+                autoplay: true,
                 // nav: true,
                 // dots: true,
             });
