@@ -362,12 +362,107 @@
 }
 
 .block1440 {
-    max-width: 1440px;
+    width: 1440px;
     margin: 0 auto;
+}
+.all-title {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #7EC4BA;
+}
+.all-title span {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: initial;
+    line-height: 14px;
+    padding-left: 10px;
+    border-left: 1px solid #7EC4BA;
+    margin-left: 10px;
+    vertical-align: middle;
 }
 
 /* Event ▼▼▼ */  
+#event {
+    display: flex;
+    align-items: center;    
+    overflow: hidden;
+    height: calc(360px + 100px);
+    /* background: rgb(20, 20, 32); */
+}
+.event-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 300px;
+    padding: 15px 0;
+    border-top: 1px solid #7EC4BA;
+    border-bottom: 1px solid #7EC4BA;
+    color: #7EC4BA;
+}
+.event-timeNname {
+    letter-spacing: 1px;
+    font-size: 14px;
+}
+.event-dayNtime {
+    margin-bottom: 10px;
+}
 
+.event-day {
+    letter-spacing: 5px;
+}
+
+.event-two-team {
+    width: calc(100% - 55px - 35px - 30px);
+    padding: 0 10px 0 20px;
+}
+.event-team {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.event-team img {
+    max-width: 30px;
+    height: auto;
+}
+.event-team:first-child {
+    margin-bottom: 10px;
+}
+.event-score {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.event-btn {
+    width: 60px;
+    height: 35px; 
+    line-height: 35px;
+    text-align: center;
+    font-size: 14px;
+    background-color: #008473;
+    color: #fff;
+}
+.event-btn:hover {
+    background-color: #7EC4BA;
+}
+
+.event-carousel .owl-nav {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;  
+}
+
+.event-arrowL, .event-arrowR {
+    color: #008473; 
+    transition: color .5s;
+}
+.event-arrowL:hover, .event-arrowR:hover {
+    color: #7EC4BA;
+}
+.event-carousel .owl-prev.disabled,
+.event-carousel .owl-next.disabled{
+opacity: 0;
+}
 
 /* Event ▲▲▲ */
 
@@ -438,6 +533,13 @@
         font-size: 16px;
     }
     /*mainVideo 推薦頻道 ▲▲▲ */
+
+
+
+    
+    .block1440 {
+        width: calc(100% - 160px);
+    }
 }
 
 @media screen and (max-width: 1470px) {  
@@ -577,6 +679,20 @@
         font-size: 14px;
     }
     /*mainVideo 推薦熱門 ▲▲▲ */
+
+
+    /* Event ▼▼▼ */
+    #event .block1440 {
+        width: calc(100% - 80px);
+        margin-left: 80px;
+    }
+    .event-carousel .owl-nav {
+        margin-top: 15px;
+    }
+    .event-carousel .owl-nav button.owl-next {
+        margin-right: 30px;
+    }    
+    /* Event ▲▲▲ */
 }
 
 @media screen and (max-width: 1024px) {   
@@ -587,7 +703,7 @@
     .header-icon-menu {
         display: block;
     }
-    /* header ▲▲▲ */
+    /* header ▲▲▲ */  
 }   
 
 @media screen and (max-width: 1000px) {  
@@ -613,6 +729,14 @@
         display: none;
     }
     /*mainVideo 推薦熱門 ▲▲▲ */
+
+
+    
+    /* Event ▼▼▼ */
+    .event-carousel .owl-nav button.owl-next {
+        margin-right: 50px;
+    }    
+    /* Event ▲▲▲ */
 }
 
 
@@ -749,6 +873,17 @@
         bottom: calc(50% - 35px);
         left: calc(50% - 35px);
     }    
+
+    
+    /* Event ▼▼▼ */
+    #event .block1440 {
+        width: calc(100% - 30px);
+        margin-left: 30px;
+    }
+    .event-carousel .owl-nav button.owl-next {
+        margin-right: 30px;
+    }    
+    /* Event ▲▲▲ */
 }
 
 
@@ -781,4 +916,26 @@
         margin-bottom: 0;
     }
     /*mainVideo 主要影片 ▲▲▲ */
+
+
+
+     /* Event ▼▼▼ */
+     #event {
+        height: auto;
+    }    
+    #event .block1440 {
+        width: calc(100% - 60px);
+        margin: 0 auto;
+    }
+    .block1440 {
+        padding-top: 60px;
+    }
+    
+    .event-carousel.owl-drag .owl-item, .event-content {
+        width: 100%;
+    }
+    .event-content {        
+        border-bottom: none;
+    }
+    /* Event ▲▲▲ */
 }
