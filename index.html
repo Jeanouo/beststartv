@@ -7,6 +7,7 @@
         <title>讚星首頁</title>
         <link rel="stylesheet" href="css/reset.css">    
         <!-- <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/> -->
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
         <link rel="stylesheet" href="css/owl.carousel.min.css">
         <link rel="stylesheet" href="css/owl.theme.default.min.css">  
         <link rel="stylesheet" href="https://use.typekit.net/nmb7xwe.css">
@@ -300,7 +301,7 @@
         <section id="event">
             <div class="block1440">
                 <h2 class="all-title">Event<span>賽事</span></h2>
-                <div class="owl-carousel event-carousel"> 
+                <div class="owl-carousel event-carousel event-show-few"> 
                     <div class="event-content">
                         <div class="event-timeNname">
                             <div class="event-dayNtime">
@@ -442,6 +443,7 @@
                         <a  class="event-btn" >預定</a>
                     </div>                                                            
                 </div>
+                <button class="more-toggle">more<i class="icon-arrowOpen"></i></button>
             </div>
         </section>
         <!-- 節目表 -->
@@ -472,7 +474,9 @@
         <footer id="footer"></footer>
     </body>
     
-    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.min.js"></script>    
+  <!-- <script src="//code.jquery.com/jquery-1.12.4.js"></script> -->
+    <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="js/owl.carousel.min.js"></script>
     <script> 
         $(document).ready(function(){
@@ -543,6 +547,7 @@
                 items:4.2,
                 autoplayHoverPause: false,
                 // autoplay: true,
+                dots: false,
                 navText: ["<i class='icon-arrowLeft1 event-arrowL'></i>","<i class='icon-arrowRight1 event-arrowR'></i>"],                
                 responsive:{
                     0:{
@@ -557,6 +562,11 @@
                         nav: true,
                     }
                 }
+            });
+
+            $('.more-toggle').on('click', function(){
+                $(this).prev('.event-carousel').toggleClass('event-show-few', 1000, 'easeInOutQuart');
+                $(this).children().toggleClass('icon-arrowOpen icon-arrowClose');
             });
         });
     </script>

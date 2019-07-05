@@ -446,6 +446,10 @@
     background-color: #7EC4BA;
 }
 
+.event-carousel {
+    overflow: hidden;
+}
+
 .event-carousel .owl-nav {
     display: flex;
     justify-content: space-between;
@@ -462,6 +466,10 @@
 .event-carousel .owl-prev.disabled,
 .event-carousel .owl-next.disabled{
 opacity: 0;
+}
+
+.more-toggle {
+    display: none;
 }
 
 /* Event ▲▲▲ */
@@ -918,6 +926,19 @@ opacity: 0;
     /*mainVideo 主要影片 ▲▲▲ */
 
 
+    .more-toggle {
+        display: block;
+        width: 100%;
+        line-height: 35px;
+        text-align: center;
+        color: #008473;
+        font-size: 14px;
+    }
+    .more-toggle i {
+        font-size: 12px;
+        vertical-align: middle;
+        padding-left: 5px;
+    }
 
      /* Event ▼▼▼ */
      #event {
@@ -934,8 +955,14 @@ opacity: 0;
     .event-carousel.owl-drag .owl-item, .event-content {
         width: 100%;
     }
-    .event-content {        
+    .owl-item:not(:last-child) .event-content {
         border-bottom: none;
     }
+    .event-show-few {
+        height: calc((101px * 5) + 1px);
+    }
     /* Event ▲▲▲ */
+
+ 
+    
 }
