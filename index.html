@@ -59,11 +59,94 @@
             } */
 
 
+            
+            #hotBroadcast {
+                display: flex;
+                align-items: center;
+                /* height: 1080px; */
+                height: auto;
+                padding: 80px 0;
+            }
+            .hotBroadcast-content {
+                display: flex;
+                flex-wrap: wrap;
+                overflow: hidden;    
+            }
+            .hotBroadcast-video-box {
+                width: calc((100% - 80px) / 5);
+                border: 2px solid #00847300;
+                /* margin: 0 10px 50px 10px; */
+                margin: 0 10px 50px 10px;
+                color: #008473;
+                cursor: default;
+                transition: all .5s;
+            }
+                .hotBroadcast-video-box:nth-child(5n) {
+                    margin: 0 0 50px 10px;
+                }
+                .hotBroadcast-video-box:nth-child(5n-4) {
+                    margin: 0 10px 50px 0;
+                }
+                
+            .hotBroadcast-video-box:hover {
+                border: 2px solid #008473;
+            }
+            .hotBroadcast-video-box:hover .hotBroadcast-btn {
+                color: #fff;
+                background-color: #008473;
+            }
+            .hotBroadcast-video {
+                width: 100%;
+                /* height: calc(100% * 0.56);
+                overflow: hidden; */
+            }
+            .hotBroadcast-video img {
+                width: 100%;
+            }
+            .hotBroadcast-text {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                padding: 10px 20px 5px 20px;
+            }
+            .hotBroadcast-title {
+                font-weight: bold;
+            }
+            .hotBroadcast-classify {
+                font-size: 12px;
+            }
+            .hotBroadcast-other {
+                width: 100%;
+                display: flex;
+                justify-content:space-between;
+                font-size: 12px;
+                padding: 10px 0 5px 0;
+            }
+            .hotBroadcast-anchor {
+                text-align: left;
+            }
+            .hotBroadcast-looking {
+                text-align: right;
+            }
+            .hotBroadcast-btn {
+                width: 100%;
+                height: 40px; 
+                line-height: 40px;
+                color: #008473;
+                letter-spacing: 1px;
+                text-align: center;
+                border: 2px solid #008473;
+                transition: all .5s;
+            }
+            .hotBroadcast-video-box .hotBroadcast-btn:hover {
+                background-color: #14a793;
+                border: 2px solid #14a793;
+            }
 
             
             
 
-            
 
             #program {
                 height: 1080px;
@@ -77,14 +160,7 @@
                 height: calc(500px + 80px);
                 background: #75a;
             }
-            #hotBroadcast {
-                height: 1080px;
-                background: #1a9;
-            }
-            #footer {
-                height: 500px;
-                background: rgb(204, 142, 173);
-            }
+            
 
             @media screen and (max-width: 1650px) { 
                 
@@ -98,20 +174,104 @@
                 
             }
 
-            @media screen and (max-width: 1400px) {    
-                
+            @media screen and (max-width: 1400px) {      
             }
 
-            @media screen and (max-width: 1300px) {    
-                
+            @media screen and (max-width: 1300px) {  
+                .w-1300-notshow {
+                    display: none;
+                }
+                .hotBroadcast-video-box {
+                    width: calc((100% - 60px) / 4);
+                }                    
+                    .hotBroadcast-video-box:nth-child(5n),
+                    .hotBroadcast-video-box:nth-child(5n-4) {
+                        margin: 0 10px 50px 10px;
+                    }
+                    .hotBroadcast-video-box:nth-child(4n) {
+                        margin: 0 0 50px 10px;
+                    }
+                    .hotBroadcast-video-box:nth-child(4n-3) {
+                        margin: 0 10px 50px 0;
+                    }
             }
 
-            @media screen and (max-width: 1024px) {     
+            @media screen and (max-width: 1130px) {    
+            }
 
+            @media screen and (max-width: 1024px) {    
+                .w-1024-notshow {
+                    display: none;
+                }               
+                .hotBroadcast-video-box {
+                    width: calc((100% - 32px) / 3);
+                    margin: 0 8px 20px 8px;
+                }                     
+                    .hotBroadcast-video-box:nth-child(4n),
+                    .hotBroadcast-video-box:nth-child(4n-3) {
+                        margin: 0 8px 20px 8px;
+                    }
+                    .hotBroadcast-video-box:nth-child(3n) {
+                        margin: 0 0 20px 8px;
+                    }
+                    .hotBroadcast-video-box:nth-child(3n-2) {
+                        margin: 0 8px 20px 0;
+                    }
+                .hotBroadcast-text {
+                    padding: 5px 10px 5px 10px;
+                }
+            }            
+
+            @media screen and (max-width: 970px) {      
+            }
+            @media screen and (max-width: 885px) {      
+            }
+            @media screen and (max-width: 810px) {       
+            }
+            
+            @media screen and (max-width: 768px) {
+            }
+
+            @media screen and (max-width: 680px) {   
+                .w-1300-notshow, .w-1024-notshow {
+                    display: block;
+                }  
+                .hotBroadcast-video-box {
+                    width: calc((100% - 10px) / 2);
+                }        
+                    .hotBroadcast-video-box:nth-child(even) {
+                        margin: 0 0 18px 5px;
+                    }
+                    .hotBroadcast-video-box:nth-child(odd) {
+                        margin: 0 5px 18px 0;
+                    }         
+            }
+
+            @media screen and (max-width: 550px) {
+                
             }
 
             @media screen and (max-width: 480px) {
-               
+                #hotBroadcast {
+                    padding: 0;
+                }
+                .hotBroadcast-video-box {
+                    width: calc((100% - 6px) / 2);
+                }          
+                    .hotBroadcast-video-box:nth-child(even) {
+                        margin: 0 0 18px 3px;
+                    }
+                    .hotBroadcast-video-box:nth-child(odd) {
+                        margin: 0 3px 18px 0;
+                    }
+                .hotBroadcast-title {
+                    font-size: 12px;
+                }
+                .hotBroadcast-btn {
+                    font-size: 12px;
+                    height: 30px;
+                    line-height: 30px;
+                }
             }
         </style>
     </head>
@@ -449,7 +609,7 @@
         <!-- 節目表 -->
         <section id="program">
             <div class="block1440">
-                <h2 class="all-title">Program<span>節目表</span></h2>
+                <a href="#"><h2 class="all-title">Program<span>節目表</span></h2></a>
             </div>
         </section>
         <!-- 熱門推薦 -->
@@ -467,11 +627,211 @@
         <!-- 熱播 -->
         <section id="hotBroadcast">
             <div class="block1440">
-                <h2 class="all-title">Hot Broadcast<span>體育熱播</span></h2>
+                <a href="#"><h2 class="all-title">Hot Broadcast<span>體育熱播</span></h2></a>
+                <div class="hotBroadcast-content hotBroadcast-content-show-few">
+                    <div class="hotBroadcast-video-box">
+                        <div class="hotBroadcast-video"><img src="image/01.JPG" alt=""></div>
+                        <div class="hotBroadcast-text">
+                            <p class="hotBroadcast-title more">赞星9号的直播123</p>
+                            <p class="hotBroadcast-classify more">足球</p>
+                            <div class="hotBroadcast-other">
+                                <p class="hotBroadcast-anchor more">赞星9号</p>
+                                <!-- <p class="hotBroadcast-date">2019-11-11</p> -->
+                                <p class="hotBroadcast-looking more">5</p>
+                                <!-- <p class="hotBroadcast-cumulative">1325</p> -->
+                            </div>
+                            <a href="#" class="hotBroadcast-btn">進入直播</a>
+                        </div>
+                    </div>
+                    <div class="hotBroadcast-video-box">
+                        <div class="hotBroadcast-video"><img src="image/01.JPG" alt=""></div>
+                        <div class="hotBroadcast-text">
+                            <p class="hotBroadcast-title more">赞星9号的直播123</p>
+                            <p class="hotBroadcast-classify more">足球</p>
+                            <div class="hotBroadcast-other">
+                                <p class="hotBroadcast-anchor more">赞星9号</p>
+                                <!-- <p class="hotBroadcast-date">2019-11-11</p> -->
+                                <p class="hotBroadcast-looking more">5</p>
+                                <!-- <p class="hotBroadcast-cumulative">1325</p> -->
+                            </div>
+                            <a href="#" class="hotBroadcast-btn">進入直播</a>
+                        </div>
+                    </div>
+                    <div class="hotBroadcast-video-box">
+                        <div class="hotBroadcast-video"><img src="image/01.JPG" alt=""></div>
+                        <div class="hotBroadcast-text">
+                            <p class="hotBroadcast-title more">赞星9号的直播123</p>
+                            <p class="hotBroadcast-classify more">足球</p>
+                            <div class="hotBroadcast-other">
+                                <p class="hotBroadcast-anchor more">赞星9号</p>
+                                <!-- <p class="hotBroadcast-date">2019-11-11</p> -->
+                                <p class="hotBroadcast-looking more">5</p>
+                                <!-- <p class="hotBroadcast-cumulative">1325</p> -->
+                            </div>
+                            <a href="#" class="hotBroadcast-btn">進入直播</a>
+                        </div>
+                    </div>
+                    <div class="hotBroadcast-video-box">
+                        <div class="hotBroadcast-video"><img src="image/01.JPG" alt=""></div>
+                        <div class="hotBroadcast-text">
+                            <p class="hotBroadcast-title more">赞星9号的直播123</p>
+                            <p class="hotBroadcast-classify more">足球</p>
+                            <div class="hotBroadcast-other">
+                                <p class="hotBroadcast-anchor more">赞星9号</p>
+                                <!-- <p class="hotBroadcast-date">2019-11-11</p> -->
+                                <p class="hotBroadcast-looking more">5</p>
+                                <!-- <p class="hotBroadcast-cumulative">1325</p> -->
+                            </div>
+                            <a href="#" class="hotBroadcast-btn">進入直播</a>
+                        </div>
+                    </div>
+                    <div class="hotBroadcast-video-box">
+                        <div class="hotBroadcast-video"><img src="image/01.JPG" alt=""></div>
+                        <div class="hotBroadcast-text">
+                            <p class="hotBroadcast-title more">赞星9号的直播123</p>
+                            <p class="hotBroadcast-classify more">足球</p>
+                            <div class="hotBroadcast-other">
+                                <p class="hotBroadcast-anchor more">赞星9号</p>
+                                <!-- <p class="hotBroadcast-date">2019-11-11</p> -->
+                                <p class="hotBroadcast-looking more">5</p>
+                                <!-- <p class="hotBroadcast-cumulative">1325</p> -->
+                            </div>
+                            <a href="#" class="hotBroadcast-btn">進入直播</a>
+                        </div>
+                    </div>
+                    <div class="hotBroadcast-video-box">
+                        <div class="hotBroadcast-video"><img src="image/01.JPG" alt=""></div>
+                        <div class="hotBroadcast-text">
+                            <p class="hotBroadcast-title more">赞星9号的直播123</p>
+                            <p class="hotBroadcast-classify more">足球</p>
+                            <div class="hotBroadcast-other">
+                                <p class="hotBroadcast-anchor more">赞星9号</p>
+                                <!-- <p class="hotBroadcast-date">2019-11-11</p> -->
+                                <p class="hotBroadcast-looking more">5</p>
+                                <!-- <p class="hotBroadcast-cumulative">1325</p> -->
+                            </div>
+                            <a href="#" class="hotBroadcast-btn">進入直播</a>
+                        </div>
+                    </div>
+                    <div class="hotBroadcast-video-box w-1024-notshow">
+                        <div class="hotBroadcast-video"><img src="image/01.JPG" alt=""></div>
+                        <div class="hotBroadcast-text">
+                            <p class="hotBroadcast-title more">赞星9号的直播123</p>
+                            <p class="hotBroadcast-classify more">足球</p>
+                            <div class="hotBroadcast-other">
+                                <p class="hotBroadcast-anchor more">赞星9号</p>
+                                <!-- <p class="hotBroadcast-date">2019-11-11</p> -->
+                                <p class="hotBroadcast-looking more">5</p>
+                                <!-- <p class="hotBroadcast-cumulative">1325</p> -->
+                            </div>
+                            <a href="#" class="hotBroadcast-btn">進入直播</a>
+                        </div>
+                    </div>
+                    <div class="hotBroadcast-video-box w-1024-notshow">
+                        <div class="hotBroadcast-video"><img src="image/01.JPG" alt=""></div>
+                        <div class="hotBroadcast-text">
+                            <p class="hotBroadcast-title more">赞星9号的直播123</p>
+                            <p class="hotBroadcast-classify more">足球</p>
+                            <div class="hotBroadcast-other">
+                                <p class="hotBroadcast-anchor more">赞星9号</p>
+                                <!-- <p class="hotBroadcast-date">2019-11-11</p> -->
+                                <p class="hotBroadcast-looking more">5</p>
+                                <!-- <p class="hotBroadcast-cumulative">1325</p> -->
+                            </div>
+                            <a href="#" class="hotBroadcast-btn">進入直播</a>
+                        </div>
+                    </div>
+                    <div class="hotBroadcast-video-box w-1300-notshow">
+                        <div class="hotBroadcast-video"><img src="image/01.JPG" alt=""></div>
+                        <div class="hotBroadcast-text">
+                            <p class="hotBroadcast-title more">赞星9号的直播123</p>
+                            <p class="hotBroadcast-classify more">足球</p>
+                            <div class="hotBroadcast-other">
+                                <p class="hotBroadcast-anchor more">赞星9号</p>
+                                <!-- <p class="hotBroadcast-date">2019-11-11</p> -->
+                                <p class="hotBroadcast-looking more">5</p>
+                                <!-- <p class="hotBroadcast-cumulative">1325</p> -->
+                            </div>
+                            <a href="#" class="hotBroadcast-btn">進入直播</a>
+                        </div>
+                    </div>
+                    <div class="hotBroadcast-video-box w-1300-notshow">
+                        <div class="hotBroadcast-video"><img src="image/01.JPG" alt=""></div>
+                        <div class="hotBroadcast-text">
+                            <p class="hotBroadcast-title more">赞星9号的直播123</p>
+                            <p class="hotBroadcast-classify more">足球</p>
+                            <div class="hotBroadcast-other">
+                                <p class="hotBroadcast-anchor more">赞星9号</p>
+                                <!-- <p class="hotBroadcast-date">2019-11-11</p> -->
+                                <p class="hotBroadcast-looking more">5</p>
+                                <!-- <p class="hotBroadcast-cumulative">1325</p> -->
+                            </div>
+                            <a href="#" class="hotBroadcast-btn">進入直播</a>
+                        </div>
+                    </div>
+                </div>
+                <button class="more-toggle">more<i class="icon-arrowOpen"></i></button>
             </div>
         </section>
         <!-- 頁尾 -->
-        <footer id="footer"></footer>
+        <footer id="footer">
+            <div class="block1440">
+                <div class="footer-map">
+                    <div class="footer-map-block">
+                        <h6>首頁</h6>
+                        <ul>
+                            <li><a href="#">TOP</a></li>
+                            <li><a href="#">賽事</a></li>
+                            <li><a href="#">節目表</a></li>
+                            <li><a href="#">快訊</a></li>
+                            <li><a href="#">推薦熱門</a></li>
+                            <li><a href="#">熱播</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-map-block">
+                        <h6>個人中心</h6>
+                        <ul>
+                            <li><a href="#">帳號管理</a></li>
+                            <li><a href="#">資產紀錄</a></li>
+                            <li><a href="#">訊息中心</a></li>
+                            <li><a href="#">屏蔽名單</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-map-block">
+                        <h6>訂閱片櫃</h6>
+                        <ul>
+                            <li><a href="#">我的訂閱</a></li>
+                            <li><a href="#">我的收藏</a></li>
+                            <li><a href="#">觀看紀錄</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-map-block">
+                        <h6>節目表</h6>
+                        <ul>
+                            <li><a href="#">節目表</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-map-block">
+                        <h6>其他</h6>
+                        <ul>
+                            <li><a href="#">更多</a></li>
+                            <li><a href="#">串流</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-content">
+                    <p class="footer-copyright">赞星TV版权所有©www.beststartv.com</p>
+                    <div class="footer-conncet">
+                        <a href="#"><span>|</span>关于我们</a>
+                        <a href="#"><span>|</span>用户服务协议<span>|</span></a>
+                        <a href="#">隐私政策<span>|</span></a>
+                    </div>
+                    <div class="footer-cooperation">
+                        <p><span>|</span>品牌合作 offical_bd@bestcasttv.com<span>|</span></p><p>官方邮箱 offical@bestcasttv.com<span>|</span></p>
+                    </div>
+                </div>            
+            </div>
+        </footer>
     </body>
     
     <script src="js/jquery.min.js"></script>    
@@ -566,7 +926,19 @@
 
             $('.more-toggle').on('click', function(){
                 $(this).prev('.event-carousel').toggleClass('event-show-few', 1000, 'easeInOutQuart');
+                
                 $(this).children().toggleClass('icon-arrowOpen icon-arrowClose');
+            });
+
+            $('.more-toggle').on('click', function(){
+                let largeHide = $('.w-1300-notshow');
+                let mediumHide = $('.w-1024-notshow');
+                
+                if() {
+                    
+                } else {
+                    
+                }
             });
         });
     </script>
