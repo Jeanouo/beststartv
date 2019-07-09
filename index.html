@@ -59,93 +59,87 @@
             } */
 
 
+            #recommend {
+                display: flex;
+                align-items: center; 
+                height: calc(500px + 80px);
+            }
             
-            #hotBroadcast {
+            .recommend-all-content {
+                display: flex;
+                height: 200px;
+            }
+            .recommend-block {
                 display: flex;
                 align-items: center;
-                /* height: 1080px; */
-                height: auto;
-                padding: 80px 0;
+                height: 100%;
             }
-            .hotBroadcast-content {
-                display: flex;
-                flex-wrap: wrap;
-                overflow: hidden;    
+            
+            .recommend-block img,.recommend-carousel .owl-item img {
+                width: auto;
+                height: 100%;
+                border-radius: 50%;
             }
-            .hotBroadcast-video-box {
-                width: calc((100% - 80px) / 5);
-                border: 2px solid #00847300;
-                /* margin: 0 10px 50px 10px; */
-                margin: 0 10px 50px 10px;
-                color: #008473;
-                cursor: default;
-                transition: all .5s;
-            }
-                .hotBroadcast-video-box:nth-child(5n) {
-                    margin: 0 0 50px 10px;
-                }
-                .hotBroadcast-video-box:nth-child(5n-4) {
-                    margin: 0 10px 50px 0;
-                }
-                
-            .hotBroadcast-video-box:hover {
-                border: 2px solid #008473;
-            }
-            .hotBroadcast-video-box:hover .hotBroadcast-btn {
-                color: #fff;
-                background-color: #008473;
-            }
-            .hotBroadcast-video {
-                width: 100%;
-                /* height: calc(100% * 0.56);
-                overflow: hidden; */
-            }
-            .hotBroadcast-video img {
-                width: 100%;
-            }
-            .hotBroadcast-text {
+            .recommmend-text {
                 display: flex;
                 flex-direction: column;
-                align-items: center;
+                width: 160px;
+                margin-left: 10px;
+            }
+            .recommend-ranking {
+                width: 70px;
                 text-align: center;
-                padding: 10px 20px 5px 20px;
+                background-color: #329A8C;
+                color: #fff;
             }
-            .hotBroadcast-title {
-                font-weight: bold;
+            .recommend-name {
+                font-size: 18px;
+                line-height: 30px;
             }
-            .hotBroadcast-classify {
-                font-size: 12px;
-            }
-            .hotBroadcast-other {
-                width: 100%;
-                display: flex;
-                justify-content:space-between;
-                font-size: 12px;
-                padding: 10px 0 5px 0;
-            }
-            .hotBroadcast-anchor {
-                text-align: left;
-            }
-            .hotBroadcast-looking {
-                text-align: right;
-            }
-            .hotBroadcast-btn {
-                width: 100%;
-                height: 40px; 
-                line-height: 40px;
-                color: #008473;
-                letter-spacing: 1px;
-                text-align: center;
-                border: 2px solid #008473;
-                transition: all .5s;
-            }
-            .hotBroadcast-video-box .hotBroadcast-btn:hover {
-                background-color: #14a793;
-                border: 2px solid #14a793;
+            .recommend-detail {
+                font-size: 14px;
             }
 
+            .recommend-carousel {
+                width: calc(100% - 370px - 40px);
+                height: 200px;
+                margin-left: 40px;
+                position: relative;
+            }
+
+            .recommend-odd, .recommend-even {
+                height: 100px;
+            }
+
+            .recommend-odd {
+                padding-bottom: 5px;
+            }
+            .recommend-even {
+                padding-top: 5px;
+            } 
+
             
+            .recommend-arrowL, .recommend-arrowR {
+                font-size: 25px;
+                color: #008473;
+                padding: 22px;
+                background-color: rgba(255, 255, 255, 0.9);
+                border-radius: 50%;
+                border: 1px solid #97CFC7;
+                position: absolute;
+                top: calc(50% - 35.5px);
+                transition: color .5s;
+            }    
+            .recommend-arrowL {
+                left: -35.5px;
+            }   
+            .recommend-arrowR {
+                right: -35.5px;
+            }
             
+            #recommend-NOcarousel {
+                display: none;
+            }
 
 
             #program {
@@ -156,122 +150,113 @@
                 height: calc(600px + 80px);
                 background: #aa6;
             }
-            #recommend {
-                height: calc(500px + 80px);
-                background: #75a;
-            }
             
 
-            @media screen and (max-width: 1650px) { 
-                
-                
-                
+            @media screen and (max-width: 1650px) {                
             }
-
-            @media screen and (max-width: 1470px) {    
-                
-
-                
+            @media screen and (max-width: 1470px) {
             }
-
             @media screen and (max-width: 1400px) {      
             }
-
-            @media screen and (max-width: 1300px) {  
-                .w-1300-notshow {
-                    display: none;
-                }
-                .hotBroadcast-video-box {
-                    width: calc((100% - 60px) / 4);
-                }                    
-                    .hotBroadcast-video-box:nth-child(5n),
-                    .hotBroadcast-video-box:nth-child(5n-4) {
-                        margin: 0 10px 50px 10px;
-                    }
-                    .hotBroadcast-video-box:nth-child(4n) {
-                        margin: 0 0 50px 10px;
-                    }
-                    .hotBroadcast-video-box:nth-child(4n-3) {
-                        margin: 0 10px 50px 0;
-                    }
+            @media screen and (max-width: 1300px) { 
             }
-
             @media screen and (max-width: 1130px) {    
             }
-
-            @media screen and (max-width: 1024px) {    
-                .w-1024-notshow {
+            @media screen and (max-width: 1024px) {
+                #recommend-carousel {
                     display: none;
-                }               
-                .hotBroadcast-video-box {
-                    width: calc((100% - 32px) / 3);
-                    margin: 0 8px 20px 8px;
-                }                     
-                    .hotBroadcast-video-box:nth-child(4n),
-                    .hotBroadcast-video-box:nth-child(4n-3) {
-                        margin: 0 8px 20px 8px;
-                    }
-                    .hotBroadcast-video-box:nth-child(3n) {
-                        margin: 0 0 20px 8px;
-                    }
-                    .hotBroadcast-video-box:nth-child(3n-2) {
-                        margin: 0 8px 20px 0;
-                    }
-                .hotBroadcast-text {
-                    padding: 5px 10px 5px 10px;
                 }
-            }            
+                #recommend-NOcarousel {
+                    display: block;
+                }
+                /* #recommend {
+                    height: auto;
+                }
+                #recommend .block1440 {
+                    width: 100%;
+                }
+                #recommend .all-title {
+                    width: calc(100% - 160px);
+                    margin: 0 auto 20px auto;
+                }
+                .recommend-all-content {
+                    height: auto;
+                    position: relative;
+                }
 
-            @media screen and (max-width: 970px) {      
+                .recommend-all-content > .recommend-block {
+                    position: absolute;
+                }
+                .recommend-block {
+                    flex-direction: column;
+                    height: auto;
+                    width: 25%;
+                    position: relative;
+                }
+                .recommend-block img, .recommend-carousel .owl-item img {
+                    width: 100%;
+                    height: auto;
+                    border-radius: 0;
+                }
+                .recommmend-text {
+                    flex-direction: initial;
+                    justify-content: space-around;
+                    align-items: center;
+                    width: 100%;
+                    margin-left: 0;
+                    position: absolute;
+                    bottom: 0;
+                    background: #000000cc;
+                    color: #fff;
+                }
+                .recommend-ranking {
+                    width: 40px;
+                    height: 40px;
+                    background-color: #329A8C;
+                    text-align: center;
+                    line-height: 40px;
+                }
+                .recommend-text-content {
+                    width: calc(100% - 70px);
+                    padding: 5px 0;
+                }
+                .recommend-name {
+                    font-size: 14px;
+                    line-height: 25px;
+                }
+                .recommend-detail {
+                    font-size: 12px;
+                }
+
+                .recommend-carousel {
+                    width: 100%;
+                    margin: 0;
+                }
+                .recommend-content {
+                    display: flex;
+                }
+                .recommend-carousel .owl-item{
+                    width: 50%;
+                }
+                .recommend-odd, .recommend-even {
+                    width: 50%;
+                    padding: 0;
+                } */
+
+            }   
+            @media screen and (max-width: 970px) { 
             }
-            @media screen and (max-width: 885px) {      
+            @media screen and (max-width: 885px) { 
             }
-            @media screen and (max-width: 810px) {       
-            }
-            
+            @media screen and (max-width: 810px) { 
+            }            
             @media screen and (max-width: 768px) {
             }
-
-            @media screen and (max-width: 680px) {   
-                .w-1300-notshow, .w-1024-notshow {
-                    display: block;
-                }  
-                .hotBroadcast-video-box {
-                    width: calc((100% - 10px) / 2);
-                }        
-                    .hotBroadcast-video-box:nth-child(even) {
-                        margin: 0 0 18px 5px;
-                    }
-                    .hotBroadcast-video-box:nth-child(odd) {
-                        margin: 0 5px 18px 0;
-                    }         
+            @media screen and (max-width: 680px) { 
             }
-
             @media screen and (max-width: 550px) {
-                
             }
-
             @media screen and (max-width: 480px) {
-                #hotBroadcast {
-                    padding: 0;
-                }
-                .hotBroadcast-video-box {
-                    width: calc((100% - 6px) / 2);
-                }          
-                    .hotBroadcast-video-box:nth-child(even) {
-                        margin: 0 0 18px 3px;
-                    }
-                    .hotBroadcast-video-box:nth-child(odd) {
-                        margin: 0 3px 18px 0;
-                    }
-                .hotBroadcast-title {
-                    font-size: 12px;
-                }
-                .hotBroadcast-btn {
-                    font-size: 12px;
-                    height: 30px;
-                    line-height: 30px;
-                }
             }
         </style>
     </head>
@@ -323,12 +308,12 @@
                         <span>賽事</span>
                     </li>
                     <li>
-                        <a data-target="#program"></a>
-                        <span>節目表</span>
-                    </li>
-                    <li>
                         <a data-target="#recommend"></a>
                         <span>熱門推薦</span>
+                    </li>
+                    <li>
+                        <a data-target="#program"></a>
+                        <span>節目表</span>
                     </li>
                     <li>
                         <a data-target="#newsletter"></a>
@@ -606,18 +591,282 @@
                 <button class="more-toggle">more<i class="icon-arrowOpen"></i></button>
             </div>
         </section>
+         <!-- 熱門推薦 -->
+        <section id="recommend">            
+            <div class="block1440">
+                <h2 class="all-title">Recommend<span>熱門推薦</span></h2>
+                <div id="recommend-carousel" class="recommend-all-content">
+                    <div class="recommend-block">
+                        <img src="image/member1.jpg" alt="">
+                        <div class="recommmend-text">
+                            <div class="recommend-ranking">1</div>
+                            <div class="recommend-text-content">
+                                <p class="recommend-name more">赞星TV频道的頻道</p>
+                                <p class="recommend-detail more-2line">马上修改公告3333333333333333333333333333333333</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="owl-carousel recommend-carousel">
+                        <div class="recommend-content">
+                            <div class="recommend-block recommend-odd">
+                                <img src="image/member1.jpg" alt="">
+                                <div class="recommmend-text">
+                                    <div class="recommend-ranking">1</div>
+                                    <p class="recommend-name more">赞星TV频道的頻道</p>
+                                    <p class="recommend-detail  more">马上修改公告3333333333333333333333333333333333</p>
+                                </div>
+                            </div>
+                            <div class="recommend-block recommend-even">
+                                <img src="image/member1.jpg" alt="">
+                                <div class="recommmend-text">
+                                    <div class="recommend-ranking">1</div>
+                                    <p class="recommend-name more">赞星TV频道的頻道</p>
+                                    <p class="recommend-detail  more">马上修改公告3333333333333333333333333333333333</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="recommend-content">
+                            <div class="recommend-block recommend-odd">
+                                <img src="image/member1.jpg" alt="">
+                                <div class="recommmend-text">
+                                    <div class="recommend-ranking">1</div>
+                                    <p class="recommend-name more">赞星TV频道的頻道</p>
+                                    <p class="recommend-detail  more">马上修改公告3333333333333333333333333333333333</p>
+                                </div>
+                            </div>
+                            <div class="recommend-block recommend-even">
+                                <img src="image/member1.jpg" alt="">
+                                <div class="recommmend-text">
+                                    <div class="recommend-ranking">1</div>
+                                    <p class="recommend-name more">赞星TV频道的頻道</p>
+                                    <p class="recommend-detail  more">马上修改公告3333333333333333333333333333333333</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="recommend-content">
+                            <div class="recommend-block recommend-odd">
+                                <img src="image/member1.jpg" alt="">
+                                <div class="recommmend-text">
+                                    <div class="recommend-ranking">1</div>
+                                    <p class="recommend-name more">赞星TV频道的頻道</p>
+                                    <p class="recommend-detail  more">马上修改公告3333333333333333333333333333333333</p>
+                                </div>
+                            </div>
+                            <div class="recommend-block recommend-even">
+                                <img src="image/member1.jpg" alt="">
+                                <div class="recommmend-text">
+                                    <div class="recommend-ranking">1</div>
+                                    <p class="recommend-name more">赞星TV频道的頻道</p>
+                                    <p class="recommend-detail  more">马上修改公告3333333333333333333333333333333333</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="recommend-content">
+                            <div class="recommend-block recommend-odd">
+                                <img src="image/member1.jpg" alt="">
+                                <div class="recommmend-text">
+                                    <div class="recommend-ranking">1</div>
+                                    <p class="recommend-name more">赞星TV频道的頻道</p>
+                                    <p class="recommend-detail  more">马上修改公告3333333333333333333333333333333333</p>
+                                </div>
+                            </div>
+                            <div class="recommend-block recommend-even">
+                                <img src="image/member1.jpg" alt="">
+                                <div class="recommmend-text">
+                                    <div class="recommend-ranking">1</div>
+                                    <p class="recommend-name more">赞星TV频道的頻道</p>
+                                    <p class="recommend-detail  more">马上修改公告3333333333333333333333333333333333</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="recommend-content">
+                            <div class="recommend-block recommend-odd">
+                                <img src="image/member1.jpg" alt="">
+                                <div class="recommmend-text">
+                                    <div class="recommend-ranking">1</div>
+                                    <p class="recommend-name more">赞星TV频道的頻道</p>
+                                    <p class="recommend-detail  more">马上修改公告3333333333333333333333333333333333</p>
+                                </div>
+                            </div>
+                            <div class="recommend-block recommend-even">
+                                <img src="image/member1.jpg" alt="">
+                                <div class="recommmend-text">
+                                    <div class="recommend-ranking">1</div>
+                                    <p class="recommend-name more">赞星TV频道的頻道</p>
+                                    <p class="recommend-detail  more">马上修改公告3333333333333333333333333333333333</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="recommend-content">
+                            <div class="recommend-block recommend-odd">
+                                <img src="image/member1.jpg" alt="">
+                                <div class="recommmend-text">
+                                    <div class="recommend-ranking">1</div>
+                                    <p class="recommend-name more">赞星TV频道的頻道</p>
+                                    <p class="recommend-detail  more">马上修改公告3333333333333333333333333333333333</p>
+                                </div>
+                            </div>
+                            <div class="recommend-block recommend-even">
+                                <img src="image/member1.jpg" alt="">
+                                <div class="recommmend-text">
+                                    <div class="recommend-ranking">1</div>
+                                    <p class="recommend-name more">赞星TV频道的頻道</p>
+                                    <p class="recommend-detail  more">马上修改公告3333333333333333333333333333333333</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="recommend-NOcarousel" class="recommend-all-content">
+                    <div class="recommend-block">
+                        <img src="image/member1.jpg" alt="">
+                        <div class="recommmend-text">
+                            <div class="recommend-ranking">1</div>
+                            <div class="recommend-text-content">
+                                <p class="recommend-name more">赞星TV频道的頻道</p>
+                                <p class="recommend-detail more-2line">马上修改公告3333333333333333333333333333333333</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="recommend-block">
+                        <img src="image/member1.jpg" alt="">
+                        <div class="recommmend-text">
+                            <div class="recommend-ranking">1</div>
+                            <div class="recommend-text-content">
+                                <p class="recommend-name more">赞星TV频道的頻道</p>
+                                <p class="recommend-detail more-2line">马上修改公告3333333333333333333333333333333333</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="recommend-block">
+                        <img src="image/member1.jpg" alt="">
+                        <div class="recommmend-text">
+                            <div class="recommend-ranking">1</div>
+                            <div class="recommend-text-content">
+                                <p class="recommend-name more">赞星TV频道的頻道</p>
+                                <p class="recommend-detail more-2line">马上修改公告3333333333333333333333333333333333</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="recommend-block">
+                        <img src="image/member1.jpg" alt="">
+                        <div class="recommmend-text">
+                            <div class="recommend-ranking">1</div>
+                            <div class="recommend-text-content">
+                                <p class="recommend-name more">赞星TV频道的頻道</p>
+                                <p class="recommend-detail more-2line">马上修改公告3333333333333333333333333333333333</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="recommend-block">
+                        <img src="image/member1.jpg" alt="">
+                        <div class="recommmend-text">
+                            <div class="recommend-ranking">1</div>
+                            <div class="recommend-text-content">
+                                <p class="recommend-name more">赞星TV频道的頻道</p>
+                                <p class="recommend-detail more-2line">马上修改公告3333333333333333333333333333333333</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="recommend-block">
+                        <img src="image/member1.jpg" alt="">
+                        <div class="recommmend-text">
+                            <div class="recommend-ranking">1</div>
+                            <div class="recommend-text-content">
+                                <p class="recommend-name more">赞星TV频道的頻道</p>
+                                <p class="recommend-detail more-2line">马上修改公告3333333333333333333333333333333333</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="recommend-block">
+                        <img src="image/member1.jpg" alt="">
+                        <div class="recommmend-text">
+                            <div class="recommend-ranking">1</div>
+                            <div class="recommend-text-content">
+                                <p class="recommend-name more">赞星TV频道的頻道</p>
+                                <p class="recommend-detail more-2line">马上修改公告3333333333333333333333333333333333</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="recommend-block">
+                        <img src="image/member1.jpg" alt="">
+                        <div class="recommmend-text">
+                            <div class="recommend-ranking">1</div>
+                            <div class="recommend-text-content">
+                                <p class="recommend-name more">赞星TV频道的頻道</p>
+                                <p class="recommend-detail more-2line">马上修改公告3333333333333333333333333333333333</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="recommend-block">
+                        <img src="image/member1.jpg" alt="">
+                        <div class="recommmend-text">
+                            <div class="recommend-ranking">1</div>
+                            <div class="recommend-text-content">
+                                <p class="recommend-name more">赞星TV频道的頻道</p>
+                                <p class="recommend-detail more-2line">马上修改公告3333333333333333333333333333333333</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="recommend-block">
+                        <img src="image/member1.jpg" alt="">
+                        <div class="recommmend-text">
+                            <div class="recommend-ranking">1</div>
+                            <div class="recommend-text-content">
+                                <p class="recommend-name more">赞星TV频道的頻道</p>
+                                <p class="recommend-detail more-2line">马上修改公告3333333333333333333333333333333333</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="recommend-block">
+                        <img src="image/member1.jpg" alt="">
+                        <div class="recommmend-text">
+                            <div class="recommend-ranking">1</div>
+                            <div class="recommend-text-content">
+                                <p class="recommend-name more">赞星TV频道的頻道</p>
+                                <p class="recommend-detail more-2line">马上修改公告3333333333333333333333333333333333</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="recommend-block">
+                        <img src="image/member1.jpg" alt="">
+                        <div class="recommmend-text">
+                            <div class="recommend-ranking">1</div>
+                            <div class="recommend-text-content">
+                                <p class="recommend-name more">赞星TV频道的頻道</p>
+                                <p class="recommend-detail more-2line">马上修改公告3333333333333333333333333333333333</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="recommend-block">
+                        <img src="image/member1.jpg" alt="">
+                        <div class="recommmend-text">
+                            <div class="recommend-ranking">1</div>
+                            <div class="recommend-text-content">
+                                <p class="recommend-name more">赞星TV频道的頻道</p>
+                                <p class="recommend-detail more-2line">马上修改公告3333333333333333333333333333333333</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="recommend-block">
+                        <img src="image/member1.jpg" alt="">
+                        <div class="recommmend-text">
+                            <div class="recommend-ranking">1</div>
+                            <div class="recommend-text-content">
+                                <p class="recommend-name more">赞星TV频道的頻道</p>
+                                <p class="recommend-detail more-2line">马上修改公告3333333333333333333333333333333333</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
         <!-- 節目表 -->
         <section id="program">
             <div class="block1440">
                 <a href="#"><h2 class="all-title">Program<span>節目表</span></h2></a>
             </div>
-        </section>
-        <!-- 熱門推薦 -->
-        <section id="recommend">            
-            <div class="block1440">
-                <h2 class="all-title">Recommend<span>熱門推薦</span></h2>
-            </div>
-        </section>
+        </section>       
         <!-- 快訊 -->
         <section id="newsletter">            
             <div class="block1440">
@@ -628,7 +877,7 @@
         <section id="hotBroadcast">
             <div class="block1440">
                 <a href="#"><h2 class="all-title">Hot Broadcast<span>體育熱播</span></h2></a>
-                <div class="hotBroadcast-content hotBroadcast-content-show-few">
+                <div class="hotBroadcast-content hB-content-show-few">
                     <div class="hotBroadcast-video-box">
                         <div class="hotBroadcast-video"><img src="image/01.JPG" alt=""></div>
                         <div class="hotBroadcast-text">
@@ -636,9 +885,7 @@
                             <p class="hotBroadcast-classify more">足球</p>
                             <div class="hotBroadcast-other">
                                 <p class="hotBroadcast-anchor more">赞星9号</p>
-                                <!-- <p class="hotBroadcast-date">2019-11-11</p> -->
                                 <p class="hotBroadcast-looking more">5</p>
-                                <!-- <p class="hotBroadcast-cumulative">1325</p> -->
                             </div>
                             <a href="#" class="hotBroadcast-btn">進入直播</a>
                         </div>
@@ -650,9 +897,7 @@
                             <p class="hotBroadcast-classify more">足球</p>
                             <div class="hotBroadcast-other">
                                 <p class="hotBroadcast-anchor more">赞星9号</p>
-                                <!-- <p class="hotBroadcast-date">2019-11-11</p> -->
                                 <p class="hotBroadcast-looking more">5</p>
-                                <!-- <p class="hotBroadcast-cumulative">1325</p> -->
                             </div>
                             <a href="#" class="hotBroadcast-btn">進入直播</a>
                         </div>
@@ -664,9 +909,7 @@
                             <p class="hotBroadcast-classify more">足球</p>
                             <div class="hotBroadcast-other">
                                 <p class="hotBroadcast-anchor more">赞星9号</p>
-                                <!-- <p class="hotBroadcast-date">2019-11-11</p> -->
                                 <p class="hotBroadcast-looking more">5</p>
-                                <!-- <p class="hotBroadcast-cumulative">1325</p> -->
                             </div>
                             <a href="#" class="hotBroadcast-btn">進入直播</a>
                         </div>
@@ -678,9 +921,7 @@
                             <p class="hotBroadcast-classify more">足球</p>
                             <div class="hotBroadcast-other">
                                 <p class="hotBroadcast-anchor more">赞星9号</p>
-                                <!-- <p class="hotBroadcast-date">2019-11-11</p> -->
                                 <p class="hotBroadcast-looking more">5</p>
-                                <!-- <p class="hotBroadcast-cumulative">1325</p> -->
                             </div>
                             <a href="#" class="hotBroadcast-btn">進入直播</a>
                         </div>
@@ -692,9 +933,7 @@
                             <p class="hotBroadcast-classify more">足球</p>
                             <div class="hotBroadcast-other">
                                 <p class="hotBroadcast-anchor more">赞星9号</p>
-                                <!-- <p class="hotBroadcast-date">2019-11-11</p> -->
                                 <p class="hotBroadcast-looking more">5</p>
-                                <!-- <p class="hotBroadcast-cumulative">1325</p> -->
                             </div>
                             <a href="#" class="hotBroadcast-btn">進入直播</a>
                         </div>
@@ -705,10 +944,8 @@
                             <p class="hotBroadcast-title more">赞星9号的直播123</p>
                             <p class="hotBroadcast-classify more">足球</p>
                             <div class="hotBroadcast-other">
-                                <p class="hotBroadcast-anchor more">赞星9号</p>
-                                <!-- <p class="hotBroadcast-date">2019-11-11</p> -->
-                                <p class="hotBroadcast-looking more">5</p>
-                                <!-- <p class="hotBroadcast-cumulative">1325</p> -->
+                                <p class="hotBroadcast-date more">2019-11-11</p>
+                                <p class="hotBroadcast-cumulative more">1325</p>
                             </div>
                             <a href="#" class="hotBroadcast-btn">進入直播</a>
                         </div>
@@ -719,10 +956,8 @@
                             <p class="hotBroadcast-title more">赞星9号的直播123</p>
                             <p class="hotBroadcast-classify more">足球</p>
                             <div class="hotBroadcast-other">
-                                <p class="hotBroadcast-anchor more">赞星9号</p>
-                                <!-- <p class="hotBroadcast-date">2019-11-11</p> -->
-                                <p class="hotBroadcast-looking more">5</p>
-                                <!-- <p class="hotBroadcast-cumulative">1325</p> -->
+                                <p class="hotBroadcast-date more">2019-11-11</p>
+                                <p class="hotBroadcast-cumulative more">1325</p>
                             </div>
                             <a href="#" class="hotBroadcast-btn">進入直播</a>
                         </div>
@@ -733,10 +968,8 @@
                             <p class="hotBroadcast-title more">赞星9号的直播123</p>
                             <p class="hotBroadcast-classify more">足球</p>
                             <div class="hotBroadcast-other">
-                                <p class="hotBroadcast-anchor more">赞星9号</p>
-                                <!-- <p class="hotBroadcast-date">2019-11-11</p> -->
-                                <p class="hotBroadcast-looking more">5</p>
-                                <!-- <p class="hotBroadcast-cumulative">1325</p> -->
+                                <p class="hotBroadcast-date more">2019-11-11</p>
+                                <p class="hotBroadcast-cumulative more">1325</p>
                             </div>
                             <a href="#" class="hotBroadcast-btn">進入直播</a>
                         </div>
@@ -747,10 +980,8 @@
                             <p class="hotBroadcast-title more">赞星9号的直播123</p>
                             <p class="hotBroadcast-classify more">足球</p>
                             <div class="hotBroadcast-other">
-                                <p class="hotBroadcast-anchor more">赞星9号</p>
-                                <!-- <p class="hotBroadcast-date">2019-11-11</p> -->
-                                <p class="hotBroadcast-looking more">5</p>
-                                <!-- <p class="hotBroadcast-cumulative">1325</p> -->
+                                <p class="hotBroadcast-date more">2019-11-11</p>
+                                <p class="hotBroadcast-cumulative more">1325</p>
                             </div>
                             <a href="#" class="hotBroadcast-btn">進入直播</a>
                         </div>
@@ -761,10 +992,8 @@
                             <p class="hotBroadcast-title more">赞星9号的直播123</p>
                             <p class="hotBroadcast-classify more">足球</p>
                             <div class="hotBroadcast-other">
-                                <p class="hotBroadcast-anchor more">赞星9号</p>
-                                <!-- <p class="hotBroadcast-date">2019-11-11</p> -->
-                                <p class="hotBroadcast-looking more">5</p>
-                                <!-- <p class="hotBroadcast-cumulative">1325</p> -->
+                                <p class="hotBroadcast-date more">2019-11-11</p>
+                                <p class="hotBroadcast-cumulative more">1325</p>
                             </div>
                             <a href="#" class="hotBroadcast-btn">進入直播</a>
                         </div>
@@ -915,6 +1144,7 @@
                         margin: 0,
                         autoWidth: false,
                         nav: false,
+                        mouseDrag: false,
                     },
                     481:{                
                         margin:40,        
@@ -924,22 +1154,41 @@
                 }
             });
 
-            $('.more-toggle').on('click', function(){
-                $(this).prev('.event-carousel').toggleClass('event-show-few', 1000, 'easeInOutQuart');
-                $(this).prev('.hotBroadcast-content').toggleClass('hotBroadcast-content-show-few', 1000, 'easeInOutQuart');
-                $(this).children().toggleClass('icon-arrowOpen icon-arrowClose');
+
+
+            $(".recommend-carousel").owlCarousel({
+                // items:4,
+                autoplayHoverPause: true,
+                // autoplay: true,
+                dots: false,
+                autoWidth: true,
+                margin: 20,
+                nav: true,
+                navText: ["<i class='icon-arrowLeft2 recommend-arrowL'></i>","<i class='icon-arrowRight2 recommend-arrowR'></i>"],              
+                // responsive:{
+                //     0:{  
+                //         items:0,
+                //         autoWidth: false,
+                //         nav: false,
+                //         margin: 0,
+                //         mouseDrag: false,
+                //     },
+                //     1025:{
+                //         items:4,
+                //         autoWidth: true,
+                //         nav: true,
+                //         margin: 20,
+                //     }
+                // }
             });
 
-            // $('.more-toggle').on('click', function(){
-            //     let largeHide = $('.w-1300-notshow');
-            //     let mediumHide = $('.w-1024-notshow');
+            $('.more-toggle').on('click', function(){
+                $(this).prev('.event-carousel').toggleClass('event-show-few', 1000, 'easeInOutQuart');
+                $(this).prev('.hotBroadcast-content').toggleClass('hB-content-show-few', 1000, 'easeInOutQuart');
+                // $(this).prev('.hotBroadcast-content').slideToggle('slow');
                 
-            //     if() {
-                    
-            //     } else {
-                    
-            //     }
-            // });
+                $(this).children().toggleClass('icon-arrowOpen icon-arrowClose');
+            });
         });
     </script>
 </html>
