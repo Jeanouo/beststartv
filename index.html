@@ -59,96 +59,77 @@
             } */
 
 
-            #recommend {
-                display: flex;
-                align-items: center; 
-                height: calc(500px + 80px);
-            }
-            
-            .recommend-all-content {
-                display: flex;
-                height: 200px;
-            }
-            .recommend-block {
-                display: flex;
-                align-items: center;
-                height: 100%;
-            }
-            
-            .recommend-block img,.recommend-carousel .owl-item img {
-                width: auto;
-                height: 100%;
-                border-radius: 50%;
-            }
-            .recommmend-text {
-                display: flex;
-                flex-direction: column;
-                width: 160px;
-                margin-left: 10px;
-            }
-            .recommend-ranking {
-                width: 70px;
-                text-align: center;
-                background-color: #329A8C;
-                color: #fff;
-            }
-            .recommend-name {
-                font-size: 18px;
-                line-height: 30px;
-            }
-            .recommend-detail {
-                font-size: 14px;
-            }
-
-            .recommend-carousel {
-                width: calc(100% - 370px - 40px);
-                height: 200px;
-                margin-left: 40px;
-                position: relative;
-            }
-
-            .recommend-odd, .recommend-even {
-                height: 100px;
-            }
-
-            .recommend-odd {
-                padding-bottom: 5px;
-            }
-            .recommend-even {
-                padding-top: 5px;
-            } 
-
-            
-            .recommend-arrowL, .recommend-arrowR {
-                font-size: 25px;
-                color: #008473;
-                padding: 22px;
-                background-color: rgba(255, 255, 255, 0.9);
-                border-radius: 50%;
-                border: 1px solid #97CFC7;
-                position: absolute;
-                top: calc(50% - 35.5px);
-                transition: color .5s;
-            }    
-            .recommend-arrowL {
-                left: -35.5px;
-            }   
-            .recommend-arrowR {
-                right: -35.5px;
-            }
-            
-            #recommend-NOcarousel {
-                display: none;
-            }
-
-
             #program {
                 height: 1080px;
                 background: rgb(153, 17, 17);
             }
             #newsletter {
+                display: flex;
+                align-items: center;
                 height: calc(600px + 80px);
-                background: #aa6;
+                /* background: #aa6; */
+            }
+            .newsletter-contentNline {
+                display: flex;
+                align-items: center;
+                width: 100%;
+                position: relative;
+            }
+            .newsletter-content {
+                display: flex;
+                align-items: center;
+                width: auto;
+                /* height: 200px; */
+                /* background:#ffffff66; */
+                margin-top: -60px;
+                overflow: visible;
+
+                
+                /* position: relative; */
+            }
+            .newsletter-point {
+                display: block;
+                width: 15px;
+                height: 15px;
+                background-color: #008473;
+                border-radius: 50%;
+            }
+            .newsletter-text {
+                margin-left: -15px;
+                color: #008473;
+            }
+            .newsletter-date {
+                margin-top: 65px;
+                letter-spacing: 2px;
+            }
+            .newsletter-class {
+                padding-top: 35px;
+            }
+            .newsletter-btn {
+                display: block;
+                width: 100px;
+                height: 35px;
+                color: #008473;
+                text-align: center;
+                line-height: 35px;
+                font-size: 14px;
+                letter-spacing: 1px;
+                border: 1px solid #008473;
+                margin-top: 15px;
+            }
+            .newsletter-btn:hover {
+                color: #fff;
+                background-color: #008473;
+            }
+
+
+
+            .newsletter-line {
+                width: 100%;
+                height: 3px;
+                background:#008473;
+                position: absolute;
+
             }
             
 
@@ -162,87 +143,19 @@
             }
             @media screen and (max-width: 1130px) {    
             }
-            @media screen and (max-width: 1024px) {
-                #recommend-carousel {
-                    display: none;
+            @media screen and (max-width: 1100px) {
+                #newsletter .block1440 {
+                    width: calc(100% - 80px);
+                    margin: 0 0 0 80px;
+                    overflow: hidden;
                 }
-                #recommend-NOcarousel {
-                    display: block;
-                }
-                /* #recommend {
-                    height: auto;
-                }
-                #recommend .block1440 {
-                    width: 100%;
-                }
-                #recommend .all-title {
-                    width: calc(100% - 160px);
-                    margin: 0 auto 20px auto;
-                }
-                .recommend-all-content {
-                    height: auto;
-                    position: relative;
-                }
-
-                .recommend-all-content > .recommend-block {
-                    position: absolute;
-                }
-                .recommend-block {
-                    flex-direction: column;
-                    height: auto;
-                    width: 25%;
-                    position: relative;
-                }
-                .recommend-block img, .recommend-carousel .owl-item img {
-                    width: 100%;
-                    height: auto;
-                    border-radius: 0;
-                }
-                .recommmend-text {
-                    flex-direction: initial;
-                    justify-content: space-around;
-                    align-items: center;
-                    width: 100%;
-                    margin-left: 0;
-                    position: absolute;
-                    bottom: 0;
-                    background: #000000cc;
-                    color: #fff;
-                }
-                .recommend-ranking {
-                    width: 40px;
-                    height: 40px;
-                    background-color: #329A8C;
-                    text-align: center;
-                    line-height: 40px;
-                }
-                .recommend-text-content {
-                    width: calc(100% - 70px);
-                    padding: 5px 0;
-                }
-                .recommend-name {
+                
+                .newsletter-detail {
                     font-size: 14px;
-                    line-height: 25px;
                 }
-                .recommend-detail {
-                    font-size: 12px;
-                }
-
-                .recommend-carousel {
-                    width: 100%;
-                    margin: 0;
-                }
-                .recommend-content {
-                    display: flex;
-                }
-                .recommend-carousel .owl-item{
-                    width: 50%;
-                }
-                .recommend-odd, .recommend-even {
-                    width: 50%;
-                    padding: 0;
-                } */
-
+            }  
+            @media screen and (max-width: 1024px) {
+                
             }   
             @media screen and (max-width: 970px) { 
             }
@@ -250,13 +163,81 @@
             }
             @media screen and (max-width: 810px) { 
             }            
-            @media screen and (max-width: 768px) {
+            @media screen and (max-width: 768px) { 
+                
             }
             @media screen and (max-width: 680px) { 
             }
             @media screen and (max-width: 550px) {
+                
             }
-            @media screen and (max-width: 480px) {
+            @media screen and (max-width: 480px) {                
+                #newsletter {
+                    height: auto;
+                }
+                #newsletter .block1440 {
+                    width: calc(100% - 80px);
+                    margin: 0 0 0 80px;
+                    overflow: hidden;
+                }   
+                .newsletter-contentNline {
+                    flex-direction: column;
+                }
+                #newsletter .block1440 {
+                    width: calc(100% - 40px);
+                    margin: 0 auto;
+                }
+                .newsletter-carousel {
+                    width: calc(100% - 20px + 7.5px - 1.5px);
+                    margin-left: 14px;
+                    padding-top: 50px;
+                }
+                .newsletter-carousel .owl-item {
+                    width: 100%;
+                }
+                .newsletter-content {                    
+                    align-items: flex-start;
+                    margin-top: 0;
+                    margin-bottom: 20px;
+                }
+                .newsletter-text {
+                    width: calc(100% - 100px - 18px - 25px);
+                    margin-left: 25px;
+                }
+                .newsletter-date {
+                    margin-top: 0;
+                }
+                .newsletter-class {
+                    padding-top: 0;
+                }
+                .newsletter-detail {
+                    font-size: 14px;
+                }
+                .newsletter-btn {
+                    height: 30px;
+                    line-height: 30px;
+                    margin-top: 0;
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                }
+
+                .newsletter-line {
+                    width: 3px;
+                    height: calc(100% - 107px - 35px);
+                    margin-top: 107px;
+                    margin-bottom: 35px;
+                    background: #008473;
+                    position: absolute;
+                    left: 40px;
+                }
+
+                .newsletter-show-few {
+                    /* height: calc(81px * 5); */
+                    height: 568px;
+                }
+            }
+            @media screen and (max-width: 380px) {
             }
         </style>
     </head>
@@ -600,10 +581,8 @@
                         <img src="image/member1.jpg" alt="">
                         <div class="recommmend-text">
                             <div class="recommend-ranking">1</div>
-                            <div class="recommend-text-content">
-                                <p class="recommend-name more">赞星TV频道的頻道</p>
-                                <p class="recommend-detail more-2line">马上修改公告3333333333333333333333333333333333</p>
-                            </div>
+                            <p class="recommend-name more">赞星TV频道的頻道</p>
+                            <p class="recommend-detail more-2line">马上修改公告3333333333333333333333333333333333</p>
                         </div>
                     </div>
                     <div class="owl-carousel recommend-carousel">
@@ -717,8 +696,8 @@
                         </div>
                     </div>
                 </div>
-                <div id="recommend-NOcarousel" class="recommend-all-content">
-                    <div class="recommend-block">
+                <div id="recommend-NOcarousel" class="recommend-all-content recommend-show-few">
+                    <div class="SBS-recommend-block">
                         <img src="image/member1.jpg" alt="">
                         <div class="recommmend-text">
                             <div class="recommend-ranking">1</div>
@@ -728,7 +707,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="recommend-block">
+                    <div class="SBS-recommend-block">
                         <img src="image/member1.jpg" alt="">
                         <div class="recommmend-text">
                             <div class="recommend-ranking">1</div>
@@ -738,7 +717,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="recommend-block">
+                    <div class="SBS-recommend-block">
                         <img src="image/member1.jpg" alt="">
                         <div class="recommmend-text">
                             <div class="recommend-ranking">1</div>
@@ -748,7 +727,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="recommend-block">
+                    <div class="SBS-recommend-block">
                         <img src="image/member1.jpg" alt="">
                         <div class="recommmend-text">
                             <div class="recommend-ranking">1</div>
@@ -758,7 +737,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="recommend-block">
+                    <div class="SBS-recommend-block">
                         <img src="image/member1.jpg" alt="">
                         <div class="recommmend-text">
                             <div class="recommend-ranking">1</div>
@@ -768,7 +747,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="recommend-block">
+                    <div class="SBS-recommend-block">
                         <img src="image/member1.jpg" alt="">
                         <div class="recommmend-text">
                             <div class="recommend-ranking">1</div>
@@ -778,7 +757,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="recommend-block">
+                    <div class="SBS-recommend-block">
                         <img src="image/member1.jpg" alt="">
                         <div class="recommmend-text">
                             <div class="recommend-ranking">1</div>
@@ -788,7 +767,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="recommend-block">
+                    <div class="SBS-recommend-block">
                         <img src="image/member1.jpg" alt="">
                         <div class="recommmend-text">
                             <div class="recommend-ranking">1</div>
@@ -798,7 +777,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="recommend-block">
+                    <div class="SBS-recommend-block">
                         <img src="image/member1.jpg" alt="">
                         <div class="recommmend-text">
                             <div class="recommend-ranking">1</div>
@@ -808,7 +787,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="recommend-block">
+                    <div class="SBS-recommend-block">
                         <img src="image/member1.jpg" alt="">
                         <div class="recommmend-text">
                             <div class="recommend-ranking">1</div>
@@ -818,7 +797,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="recommend-block">
+                    <div class="SBS-recommend-block">
                         <img src="image/member1.jpg" alt="">
                         <div class="recommmend-text">
                             <div class="recommend-ranking">1</div>
@@ -828,27 +807,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="recommend-block">
-                        <img src="image/member1.jpg" alt="">
-                        <div class="recommmend-text">
-                            <div class="recommend-ranking">1</div>
-                            <div class="recommend-text-content">
-                                <p class="recommend-name more">赞星TV频道的頻道</p>
-                                <p class="recommend-detail more-2line">马上修改公告3333333333333333333333333333333333</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="recommend-block">
-                        <img src="image/member1.jpg" alt="">
-                        <div class="recommmend-text">
-                            <div class="recommend-ranking">1</div>
-                            <div class="recommend-text-content">
-                                <p class="recommend-name more">赞星TV频道的頻道</p>
-                                <p class="recommend-detail more-2line">马上修改公告3333333333333333333333333333333333</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="recommend-block">
+                    <div class="SBS-recommend-block">
                         <img src="image/member1.jpg" alt="">
                         <div class="recommmend-text">
                             <div class="recommend-ranking">1</div>
@@ -859,6 +818,7 @@
                         </div>
                     </div>
                 </div>
+                <button class="more-toggle">more<i class="icon-arrowOpen"></i></button>
             </div>
         </section>
         <!-- 節目表 -->
@@ -868,9 +828,105 @@
             </div>
         </section>       
         <!-- 快訊 -->
-        <section id="newsletter">            
-            <div class="block1440">
-                <h2 class="all-title">Newsletter<span>快訊</span></h2>
+        <section id="newsletter">   
+            <div class="newsletter-contentNline newsletter-show-few">       
+                <div class="block1440">
+                    <h2 class="all-title">Newsletter<span>快訊</span></h2>
+                    <div class="owl-carousel newsletter-carousel">
+                        <div class="newsletter-content">
+                            <span class="newsletter-point"></span>
+                            <div class="newsletter-text">
+                                <p class="newsletter-date">6/18 14:00</p>
+                                <p class="newsletter-class">公告</p>
+                                <p class="newsletter-detail">標題的字數最多只能顯示十五個字</p>
+                                <a href="" class="newsletter-btn">進入</a>
+                            </div>                            
+                        </div>
+                        <div class="newsletter-content">
+                            <span class="newsletter-point"></span>
+                            <div class="newsletter-text">
+                                <p class="newsletter-date">6/18 14:00</p>
+                                <p class="newsletter-class">公告</p>
+                                <p class="newsletter-detail">標題的字數最五個字</p>
+                                <a href="" class="newsletter-btn">進入</a>
+                            </div>                            
+                        </div>
+                        <div class="newsletter-content">
+                            <span class="newsletter-point"></span>
+                            <div class="newsletter-text">
+                                <p class="newsletter-date">6/18 14:00</p>
+                                <p class="newsletter-class">公告</p>
+                                <p class="newsletter-detail">標題的字數最多只能顯示十五個字標題的字數最多只能顯示十五個字</p>
+                                <a href="" class="newsletter-btn">進入</a>
+                            </div>                            
+                        </div>
+                        <div class="newsletter-content">
+                            <span class="newsletter-point"></span>
+                            <div class="newsletter-text">
+                                <p class="newsletter-date">6/18 14:00</p>
+                                <p class="newsletter-class">公告</p>
+                                <p class="newsletter-detail">標題的字數最多只能顯示十五個字標題的字數最</p>
+                                <a href="" class="newsletter-btn">進入</a>
+                            </div>                            
+                        </div>
+                        <div class="newsletter-content">
+                            <span class="newsletter-point"></span>
+                            <div class="newsletter-text">
+                                <p class="newsletter-date">6/18 14:00</p>
+                                <p class="newsletter-class">公告</p>
+                                <p class="newsletter-detail">標題的字數最多只能十五個字</p>
+                                <a href="" class="newsletter-btn">進入</a>
+                            </div>                            
+                        </div>
+                        <div class="newsletter-content">
+                            <span class="newsletter-point"></span>
+                            <div class="newsletter-text">
+                                <p class="newsletter-date">6/18 14:00</p>
+                                <p class="newsletter-class">公告</p>
+                                <p class="newsletter-detail">標題的字數最多只能顯示十五個字</p>
+                                <a href="" class="newsletter-btn">進入</a>
+                            </div>                            
+                        </div>
+                        <div class="newsletter-content">
+                            <span class="newsletter-point"></span>
+                            <div class="newsletter-text">
+                                <p class="newsletter-date">6/18 14:00</p>
+                                <p class="newsletter-class">公告</p>
+                                <p class="newsletter-detail">標題的字數最五個字</p>
+                                <a href="" class="newsletter-btn">進入</a>
+                            </div>                            
+                        </div>
+                        <div class="newsletter-content">
+                            <span class="newsletter-point"></span>
+                            <div class="newsletter-text">
+                                <p class="newsletter-date">6/18 14:00</p>
+                                <p class="newsletter-class">公告</p>
+                                <p class="newsletter-detail">標題的字數最多只能顯示十五個字標題的字數最多只能顯示十五個字</p>
+                                <a href="" class="newsletter-btn">進入</a>
+                            </div>                            
+                        </div>
+                        <div class="newsletter-content">
+                            <span class="newsletter-point"></span>
+                            <div class="newsletter-text">
+                                <p class="newsletter-date">6/18 14:00</p>
+                                <p class="newsletter-class">公告</p>
+                                <p class="newsletter-detail">標題的字數最多只能顯示十五個字標題的字數最</p>
+                                <a href="" class="newsletter-btn">進入</a>
+                            </div>                            
+                        </div>
+                        <div class="newsletter-content">
+                            <span class="newsletter-point"></span>
+                            <div class="newsletter-text">
+                                <p class="newsletter-date">6/18 14:00</p>
+                                <p class="newsletter-class">公告</p>
+                                <p class="newsletter-detail">標題的字數最多只能十五個字</p>
+                                <a href="" class="newsletter-btn">進入</a>
+                            </div>                            
+                        </div>
+                    </div>
+                </div>                
+                <div class="newsletter-line"><span></span></div>
+                <button class="more-toggle">more<i class="icon-arrowOpen"></i></button>
             </div>
         </section>
         <!-- 熱播 -->
@@ -1154,7 +1210,28 @@
                 }
             });
 
+            $(".newsletter-carousel").owlCarousel({
+                // items:4.2,
+                autoplayHoverPause: false,
+                // autoplay: true,
+                nav: false,
+                dots: false,
+                // navText: ["<i class='icon-arrowLeft1 event-arrowL'></i>","<i class='icon-arrowRight1 event-arrowR'></i>"],                
+                responsive:{
+                    0:{
+                        items: 0,
+                        margin: 0,
+                        autoWidth: false,
+                        mouseDrag: false,
+                    },
+                    481:{          
+                        margin: 50,      
+                        autoWidth: true,
+                    }
+                }
+            });
 
+            
 
             $(".recommend-carousel").owlCarousel({
                 // items:4,
@@ -1165,27 +1242,14 @@
                 margin: 20,
                 nav: true,
                 navText: ["<i class='icon-arrowLeft2 recommend-arrowL'></i>","<i class='icon-arrowRight2 recommend-arrowR'></i>"],              
-                // responsive:{
-                //     0:{  
-                //         items:0,
-                //         autoWidth: false,
-                //         nav: false,
-                //         margin: 0,
-                //         mouseDrag: false,
-                //     },
-                //     1025:{
-                //         items:4,
-                //         autoWidth: true,
-                //         nav: true,
-                //         margin: 20,
-                //     }
-                // }
             });
 
             $('.more-toggle').on('click', function(){
                 $(this).prev('.event-carousel').toggleClass('event-show-few', 1000, 'easeInOutQuart');
+                $(this).prev('#recommend-NOcarousel').toggleClass('recommend-show-few', 1000, 'easeInOutQuart');
+
+                $(this).parent('.newsletter-contentNline').toggleClass('newsletter-show-few', 1000, 'easeInOutQuart');
                 $(this).prev('.hotBroadcast-content').toggleClass('hB-content-show-few', 1000, 'easeInOutQuart');
-                // $(this).prev('.hotBroadcast-content').slideToggle('slow');
                 
                 $(this).children().toggleClass('icon-arrowOpen icon-arrowClose');
             });

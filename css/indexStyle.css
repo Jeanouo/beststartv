@@ -481,7 +481,7 @@
 .more-toggle {
     display: none;
     width: 100%;
-    line-height: 35px;
+    line-height: 50px;
     text-align: center;
     color: #008473;
     font-size: 14px;
@@ -492,6 +492,90 @@
     padding-left: 5px;
 }
 
+
+/* recommend ▼▼▼ */ 
+#recommend {
+    display: flex;
+    align-items: center; 
+    height: calc(500px + 80px);
+}
+
+.recommend-all-content {
+    display: flex;
+    height: 200px;
+}
+.recommend-block {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.recommend-block img,.recommend-carousel .owl-item img {
+    width: auto;
+    height: 100%;
+    border-radius: 50%;
+}
+.recommmend-text {
+    display: flex;
+    flex-direction: column;
+    width: 160px;
+    margin-left: 10px;
+}
+.recommend-ranking {
+    width: 70px;
+    text-align: center;
+    background-color: #329A8C;
+    color: #fff;
+}
+.recommend-name {
+    font-size: 18px;
+    line-height: 30px;
+}
+.recommend-detail {
+    font-size: 14px;
+}
+
+.recommend-carousel {
+    width: calc(100% - 370px - 40px);
+    height: 200px;
+    margin-left: 40px;
+    position: relative;
+}
+
+.recommend-odd, .recommend-even {
+    height: 100px;
+}
+
+.recommend-odd {
+    padding-bottom: 5px;
+}
+.recommend-even {
+    padding-top: 5px;
+} 
+
+
+.recommend-arrowL, .recommend-arrowR {
+    font-size: 25px;
+    color: #008473;
+    padding: 22px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    border: 1px solid #97CFC7;
+    position: absolute;
+    top: calc(50% - 35.5px);
+    transition: color .5s;
+}    
+.recommend-arrowL {
+    left: -35.5px;
+}   
+.recommend-arrowR {
+    right: -35.5px;
+}
+
+#recommend-NOcarousel {
+    display: none;
+}
+/* recommend ▲▲▲ */
 
 
 
@@ -912,6 +996,68 @@
     }
     /* header ▲▲▲ */  
 
+    /* recommend ▼▼▼ */ 
+    #recommend {
+        height: auto;
+    }
+    #recommend-carousel {
+        display: none;
+    }
+
+    #recommend .block1440 {
+        width: 100%;
+        margin: 0;
+    }                
+    #recommend .all-title {
+        width: calc(100% - 160px);
+        margin: 0 auto 20px auto;
+    }
+    #recommend-NOcarousel {                    
+        display: flex;
+        flex-wrap: wrap;
+        height: auto;
+    }
+    
+    .SBS-recommend-block {
+        display: flex;
+        width: 25%;
+        position: relative;
+    }
+    .SBS-recommend-block img {
+        width: 100%;
+    }
+    .SBS-recommend-block .recommmend-text {
+        flex-direction: initial;
+        justify-content: space-around;
+        align-items: center;                    
+        width: calc(100% - 10px);
+        background-color: #ffffffaa;    
+        border: 1px solid #fff;
+        border-radius: 5px;
+        box-shadow: 0 0 5px rgba(0,0,0,.3);
+        padding: 5px 0;
+        margin: 5px;
+        position: absolute;
+        bottom: 0;
+    }
+    .SBS-recommend-block .recommend-ranking {
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+    }
+    .SBS-recommend-block .recommend-text-content {
+        width: calc(100% - 70px);
+        color: #000;
+    }
+    .SBS-recommend-block .recommend-name {
+        font-size: 14px;
+        line-height: 25px;
+    }
+    .SBS-recommend-block .recommend-detail {
+        font-size: 12px;
+    }
+    /* recommend ▲▲▲ */ 
+
 
 
 
@@ -971,7 +1117,22 @@
     }    
     /* Event ▲▲▲ */
 }
-
+@media screen and (max-width: 885px) { 
+    /* recommend ▼▼▼ */
+    .SBS-recommend-block .recommmend-text {
+        border-radius: 5px 5px 0 0;
+        margin: 0 5px;
+    }
+    .SBS-recommend-block .recommend-name {
+        line-height: 20px;
+    }
+    .SBS-recommend-block .recommend-detail {
+        line-height: 12px;
+        transform: scale(.9);
+        transform-origin: left;
+    }
+    /* recommend ▲▲▲ */
+}
 
 @media screen and (max-width: 768px) {
     /* 黑幕 */     
@@ -1129,9 +1290,16 @@
     /* Event ▲▲▲ */
 
 
+    /* recommend ▼▼▼ */
+    #recommend .all-title {
+        width: calc(100% - 60px);
+        margin: 0 30px 20px 30px;
+    }
 
-
-
+    .SBS-recommend-block {
+        width: 33.33%;
+    }
+    /* recommend ▲▲▲ */
 
 
 
@@ -1195,6 +1363,20 @@
 
 
 @media screen and (max-width: 550px) {
+    /* recommend ▼▼▼ */ 
+    #recommend .more-toggle {
+        display: block;
+    }
+    .SBS-recommend-block {
+        width: 50%;
+    }
+    #recommend .recommend-show-few {
+        height: calc(50vw * 3);
+        overflow: hidden;
+    }
+    /* recommend ▲▲▲ */ 
+
+
     /* Footer ▼▼▼ */ 
     .footer-map-block {
         width: 33.3%;
@@ -1273,7 +1455,12 @@
     }
     /* Event ▲▲▲ */
 
-
+    /* recommend ▼▼▼ */
+    #recommend .all-title {
+        width: calc(100% - 40px);
+        margin: 0 20px 20px 20px;
+    }
+    /* recommend ▲▲▲ */
 
 
     /* hotBroadcast ▼▼▼ */ 
@@ -1305,4 +1492,16 @@
         margin: 0 30px;
     }   
     /* Footer ▲▲▲ */
+}
+@media screen and (max-width: 380px) {
+    /* recommend ▼▼▼ */
+    .SBS-recommend-block .recommend-ranking {
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+    }
+    .SBS-recommend-block .recommend-text-content {
+        width: calc(100% - 45px);
+    }
+    /* recommend ▲▲▲ */
 }
