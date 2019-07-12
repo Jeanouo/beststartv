@@ -1,6 +1,6 @@
 /* video設定 */
-.videowh {
-    /* padding-bottom: 56.25%; */
+/* .videowh {
+    padding-bottom: 56.25%;
     padding-bottom: 100vh;
     height: 0;
     background: #159;
@@ -13,13 +13,13 @@
     height: 100%;
     top: 0;
     left: 0;
-}
+} */
 
 /* 內容 ☆ */       
 
 
 /* 黑幕 */     
-.black-block::before {
+/* .black-block::before {
     content: '';
     display: block;      
     width: 100%;
@@ -38,7 +38,7 @@
     top: 0;
     left: 0;
     z-index: 5;
-}
+} */
 
 
 /* header ▼▼▼ */
@@ -161,7 +161,7 @@
 }
 /* side tab ▲▲▲ */
 
-.mainVideo-flex {
+/* .mainVideo-flex {
     width: 100%;
     height: 100vh;
     display: flex;
@@ -169,11 +169,11 @@
     top: 0;
     left: 0;
     z-index: 1;
-}
+} */
 
 
 /*mainVideo 最新快訊 ▼▼▼ */  
-.mainVideo-newsletter {   
+/* .mainVideo-newsletter {   
     display: flex;       
     flex-direction: column;
     justify-content: center;
@@ -263,13 +263,13 @@
 }
 .mV-newsletter-carousel button.active {
     background-color: rgb(126, 196, 186);
-}
+} */
 /*  mainVideo 最新快訊 ▲▲▲ */
 
 
 
 /*  mainVideo 主要影片 ▼▼▼ */
-.mainVideo-video { 
+/* .mainVideo-video { 
     width: 800px;
     position: absolute;
     bottom: 0;
@@ -299,12 +299,12 @@
 .mV-mainVideo-arrowR {
     left: calc(-200% - 20px);
     bottom: 40px;
-}
+} */
 /*  mainVideo 主要影片 ▲▲▲ */
 
 
 /*  mainVideo 推薦頻道 ▼▼▼ */
-.mainVideo-recommend-bg {
+/* .mainVideo-recommend-bg {
     width: 100%;
     height: 150px;
     background: rgba(255,255,255,.1);
@@ -353,7 +353,7 @@
     color: #fff;
     font-size: 14px;
     letter-spacing: 1px;
-}
+} */
 /*  mainVideo 推薦頻道 ▲▲▲ */
 
 
@@ -381,6 +381,9 @@
     margin-left: 10px;
     vertical-align: middle;
 }
+
+
+
 
 /* Event ▼▼▼ */  
 #event {
@@ -472,6 +475,9 @@
 /* Event ▲▲▲ */
 
 
+
+
+
 .owl-prev.disabled,
 .owl-next.disabled{
     opacity: 0;
@@ -491,6 +497,8 @@
     vertical-align: middle;
     padding-left: 5px;
 }
+
+
 
 
 /* recommend ▼▼▼ */ 
@@ -576,6 +584,215 @@
     display: none;
 }
 /* recommend ▲▲▲ */
+
+
+
+
+
+/* program ▼▼▼ */
+#program {
+    display: flex;
+    align-items: center;
+    height: 1080px;
+}
+
+.program-menuNcarousel {
+    display: flex;
+    align-items: center;
+}
+
+.program-menu {
+    width: 350px;
+    height: 400px;
+    background-color: #7EC4BA;
+    overflow: hidden;
+}
+.program-menu-class1 {
+    height: 50px;
+    line-height: 50px;
+    color: #fff;
+    background-color: #008473;
+    padding: 0 20px;
+}
+.program-menu-content {
+    max-height: calc(400px - 50px * 3);
+    height: 0;
+    overflow: hidden;
+    overflow-y: scroll;
+}            
+.program-menu-content::-webkit-scrollbar-track {
+    background: rgba(231,231,231,0);
+    /* -webkit-border-radius: 10px;
+    border-radius: 10px; */
+}
+.program-menu-content::-webkit-scrollbar-thumb {
+    /* -webkit-border-radius: 10px;
+    border-radius: 10px; */
+    background: #2a5246;
+    /* -webkit-box-shadow: inset 0 0 6px #d1fff1; */
+}
+.program-menu-content::-webkit-scrollbar {
+    width: 8px;
+    /* height: 10px; */
+}
+
+.program-switch {
+    height: 100%;
+}
+.program-menu-class2 {
+    height: 40px;
+    line-height: 40px;
+    color: #008473;
+    padding: 0 20px;
+    margin-left: 20px;
+}
+.program-menu-class2:hover, .program-menu-active {
+    color: #fff;
+    background-color: #008473;
+}
+
+
+.program-carousel {
+    width: calc((100% - 1440px) / 2 + (1440px - 350px - 50px));
+    position: absolute;
+    right: 0;
+}
+
+.program-carousel .recommend-arrowL {
+    left: -35.5px;
+}   
+.program-carousel .recommend-arrowR {
+    right: 80px;
+}
+.owl-nav {
+    height: 0;
+}
+
+
+.program-content {
+    width: 500px;
+    position: relative;
+}
+.program-textNbtn {
+    width: 100%;
+    height: 100%;
+    color: #fff;
+}
+
+
+.program-text {
+    padding: 10px 20px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.program-exactTime {
+    display: flex;
+    align-items: baseline;
+}
+.program-time {
+    font-size: 25px;
+    letter-spacing: 2px;
+}                     
+.program-day {
+    font-size: 16px;
+    letter-spacing: 2px;
+    padding: 0 10px;
+}
+.program-name {
+    font-size: 30px;
+    letter-spacing: 5px;
+}
+
+.program-btn {
+    width: 200px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    color: #fff;
+    background-color: #008473;
+    position: absolute;
+    bottom: calc(50% - 25px);
+    right: calc(50% - 100px);
+    opacity: 0;
+    transition: all .5s;
+}  
+.program-btn:hover {
+    background-color: #7EC4BA;
+}
+.program-content:hover .program-btn {
+    opacity: 1;
+}
+/* program ▲▲▲ */
+
+
+
+
+
+/* newsletter ▼▼▼ */ 
+#newsletter {
+    display: flex;
+    align-items: center;
+    height: calc(600px + 80px);
+}
+.newsletter-contentNline {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    position: relative;
+}
+.newsletter-content {
+    display: flex;
+    align-items: center;
+    width: auto;
+    margin-top: -60px;
+    overflow: visible;
+}
+.newsletter-point {
+    display: block;
+    width: 15px;
+    height: 15px;
+    background-color: #008473;
+    border-radius: 50%;
+}
+.newsletter-text {
+    margin-left: -15px;
+    color: #008473;
+}
+.newsletter-date {
+    margin-top: 65px;
+    letter-spacing: 2px;
+}
+.newsletter-class {
+    padding-top: 35px;
+}
+.newsletter-btn {
+    display: block;
+    width: 100px;
+    height: 35px;
+    color: #008473;
+    text-align: center;
+    line-height: 35px;
+    font-size: 14px;
+    letter-spacing: 1px;
+    border: 1px solid #008473;
+    margin-top: 15px;
+}
+.newsletter-btn:hover {
+    color: #fff;
+    background-color: #008473;
+}
+.newsletter-line {
+    width: 100%;
+    height: 3px;
+    background:#008473;
+    position: absolute;
+
+}
+/* newsletter ▲▲▲ */ 
+
+
+
 
 
 
@@ -739,7 +956,7 @@
 
 @media screen and (max-width: 1650px) {  
     /*mainVideo 最新快訊 ▼▼▼ */  
-    .mainVideo-newsletter {  
+    /* .mainVideo-newsletter {  
         width: 350px;
     }
     .mV-newsletter-day {
@@ -753,19 +970,19 @@
     }
     .mV-newsletter-btn {
         margin-top: 10px;
-    }
+    } */
     /*  mainVideo 最新快訊 ▲▲▲ */
 
 
     /*mainVideo 主要影片 ▼▼▼ */ 
-    .mainVideo {
+    /* .mainVideo {
         margin-bottom: 0px;
-    }
+    } */
     /*mainVideo 主要影片 ▲▲▲ */
 
 
     /*mainVideo 推薦頻道 ▼▼▼ */  
-    .mainVideo-recommend, .mainVideo-recommend-bg {
+    /* .mainVideo-recommend, .mainVideo-recommend-bg {
         width: 250px;
         height: 250px;
         bottom: 40px;
@@ -785,10 +1002,24 @@
     }
     .mV-recommend-channel p {
         font-size: 16px;
-    }
+    } */
     /*mainVideo 推薦頻道 ▲▲▲ */
 
-
+    /*program ▼▼▼ */
+    .program-menu {
+        width: 300px;
+    }
+    .program-carousel {
+        width: calc(100% - 80px - 300px - 50px);
+    } 
+    .program-content {
+        width: 400px;
+    }   
+    
+    .program-carousel .recommend-arrowR {
+        right: 40px;
+    }         
+    /*program ▲▲▲ */
 
     #footer .block1440 {
         width: calc(100% - 260px);
@@ -801,7 +1032,7 @@
 
 @media screen and (max-width: 1470px) {  
     /*mainVideo 最新快訊 ▼▼▼ */      
-    .mainVideo-newsletter {  
+    /* .mainVideo-newsletter {  
         justify-content: flex-end; 
         width: calc(100% - 460px);
         padding-bottom: calc(150px + ((100% - 460px) * 0.5625));
@@ -831,26 +1062,26 @@
     }
     .mV-newsletter-btn a {
         line-height: 35px;
-    }
+    } */
     /*mainVideo 最新快訊 ▲▲▲ */ 
 
 
     /*mainVideo 主要影片 ▼▼▼ */
-    .mainVideo-video {
+    /* .mainVideo-video {
         width: calc(100% - 460px);
-    }
+    } */
     /*mainVideo 主要影片 ▲▲▲ */
 }
 @media screen and (max-width: 1400px) {  
     /*mainVideo 最新快訊 ▼▼▼ */      
-    .mainVideo-newsletter {  
+    /* .mainVideo-newsletter {  
         padding-bottom: calc(150px + 40px + ((100% - 460px) * 0.5625));
-    }
+    } */
     /*mainVideo 最新快訊 ▲▲▲ */ 
 
 
     /*mainVideo 主要影片 ▼▼▼ */
-    .mainVideo-video {
+    /* .mainVideo-video {
         width: calc(100% - 460px);
         bottom: 40px;
     }
@@ -861,22 +1092,22 @@
     .mV-mainVideo-arrowL, .mV-mainVideo-arrowR {
         left: auto;
         bottom: -20px;
-    }
+    } */
     /*mainVideo 主要影片 ▲▲▲ */
 }
 
 @media screen and (max-width: 1300px) { 
     /*mainVideo 最新快訊 ▼▼▼ */
-    .mainVideo-newsletter {
+    /* .mainVideo-newsletter {
         padding-bottom: calc(150px + 40px + ((100% - 370px) * 0.5625));
-    } 
+    }  */
     /*mainVideo 最新快訊 ▲▲▲ */ 
 
 
     /*mainVideo 主要影片 ▼▼▼ */
-    .mainVideo-video {
+    /* .mainVideo-video {
         width: calc(100% - 370px);
-    }
+    } */
     /*mainVideo 主要影片 ▲▲▲ */
 
 
@@ -984,6 +1215,18 @@
         margin-right: 30px;
     }    
     /* Event ▲▲▲ */
+
+    /* newsletter ▼▼▼ */
+    #newsletter .block1440 {
+        width: calc(100% - 80px);
+        margin: 0 0 0 80px;
+        overflow: hidden;
+    }
+    
+    .newsletter-detail {
+        font-size: 14px;
+    }
+    /* newsletter ▲▲▲ */
 }
 
 @media screen and (max-width: 1024px) {   
@@ -1059,6 +1302,34 @@
     /* recommend ▲▲▲ */ 
 
 
+    /* program ▼▼▼ */
+    .program-menu {
+        display: none;
+    }
+    .program-carousel {
+        width: calc(100% + 80px);
+        position: inherit;
+    }
+    .program-time {
+        font-size: 18px;
+    }                     
+    .program-day {
+        font-size: 14px;
+    }
+    .program-name {
+        font-size: 25px;
+        letter-spacing: 2px;
+    }
+
+    .program-btn {
+        width: 120px;
+        height: 35px;
+        line-height: 35px;
+        bottom: 15px;
+        right: 20px;
+        opacity: 1;
+    }  
+    /* program ▲▲▲ */
 
 
     /* hotBroadcast ▼▼▼ */
@@ -1301,10 +1572,11 @@
     }
     /* recommend ▲▲▲ */
 
-
-
-
-
+    /* program ▼▼▼ */
+    .program-carousel {
+        width: calc(100% + 30px);
+    }
+    /* program ▲▲▲ */
 
     /* Footer ▼▼▼ */
     #footer {
@@ -1462,6 +1734,131 @@
     }
     /* recommend ▲▲▲ */
 
+    /* program ▼▼▼ */
+    #program {
+        height: auto;
+    }
+
+    #program .block1440 {
+        width: calc(100% - 20px);
+        margin-left: 20px;
+    }
+
+    .program-content {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row-reverse;
+    }
+    .program-carousel .owl-item {
+        width: 100%;
+    }
+    .program-content {
+        width: 100%;
+        margin-bottom: 25px;
+    }
+    .owl-item .program-content img {
+        width: calc(100% - 15px - 120px);
+    }
+    .program-textNbtn {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 140px;
+        height: auto;
+        color: #000;
+    }
+    .program-text {
+        padding: 0;
+        position: initial;
+    }
+
+    .program-time {
+        font-size: 20px;
+    }
+    .program-day {
+        font-size: 12px;
+    }
+    .program-name {
+        font-size: 16px;
+    }
+
+    .program-btn {
+        position: initial;
+    }
+
+    .program-show-few {
+        height: 568px;
+        overflow: hidden;
+    }
+    /* program ▲▲▲ */
+
+
+    /* newsletter ▼▼▼ */
+    #newsletter {
+        height: auto;
+    }
+    #newsletter .block1440 {
+        width: calc(100% - 80px);
+        margin: 0 0 0 80px;
+        overflow: hidden;
+    }   
+    .newsletter-contentNline {
+        flex-direction: column;
+    }
+    #newsletter .block1440 {
+        width: calc(100% - 40px);
+        margin: 0 auto;
+    }
+    .newsletter-carousel {
+        width: calc(100% - 20px + 7.5px - 1.5px);
+        margin-left: 14px;
+        padding-top: 50px;
+    }
+    .newsletter-carousel .owl-item {
+        width: 100%;
+    }
+    .newsletter-content {                    
+        align-items: flex-start;
+        margin-top: 0;
+        margin-bottom: 20px;
+    }
+    .newsletter-text {
+        width: calc(100% - 100px - 18px - 25px);
+        margin-left: 25px;
+    }
+    .newsletter-date {
+        margin-top: 0;
+    }
+    .newsletter-class {
+        padding-top: 0;
+    }
+    .newsletter-detail {
+        font-size: 14px;
+    }
+    .newsletter-btn {
+        height: 30px;
+        line-height: 30px;
+        margin-top: 0;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    .newsletter-line {
+        width: 3px;
+        height: calc(100% - 107px - 35px);
+        margin-top: 107px;
+        margin-bottom: 35px;
+        background: #008473;
+        position: absolute;
+        left: 40px;
+    }
+
+    .newsletter-show-few {
+        height: 568px;
+    }
+    /* newsletter ▲▲▲ */
+
 
     /* hotBroadcast ▼▼▼ */ 
     #hotBroadcast {
@@ -1504,4 +1901,11 @@
         width: calc(100% - 45px);
     }
     /* recommend ▲▲▲ */
+
+    /* program ▼▼▼ */
+    .program-btn {
+        height: 30px;
+        line-height: 30px;
+    } 
+    /* program ▲▲▲ */ 
 }
