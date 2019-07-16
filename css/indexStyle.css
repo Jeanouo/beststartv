@@ -1105,23 +1105,6 @@
 }
 
 @media screen and (max-width: 1300px) { 
-    /*mainVideo 最新快訊 ▼▼▼  1380*/
-    /* .mainVideo-newsletter {
-        padding-bottom: calc(150px + 40px + ((100% - 370px) * 0.5625));
-    }  */
-    /*mainVideo 最新快訊 ▲▲▲ */ 
-
-
-    /*mainVideo 主要影片 ▼▼▼ */
-    /* .mainVideo-video {
-        width: calc(100% - 370px);
-    } */
-    /*mainVideo 主要影片 ▲▲▲ */
-
-
-
-
-
     /* hotBroadcast ▼▼▼ */ 
     .w-1300-notshow {
         display: none;
@@ -1369,32 +1352,7 @@
     /* hotBroadcast ▲▲▲ */
 }   
 
-@media screen and (max-width: 1000px) {  
-    /*mainVideo 最新快訊 ▼▼▼ */
-    /* .mainVideo-newsletter {
-        width: 400px;
-        right: calc(50% - 200px);
-        padding-top: calc((100vh - 150px - 40px - (100% * 0.5625) - 80px) / 2 );
-    } */
-    /*mainVideo 最新快訊 ▲▲▲ */ 
-
-
-    /*mainVideo 主要影片 ▼▼▼ */
-    /* .mainVideo-video {
-        width: calc(100% - 180px);
-        right: 50px;
-    } */
-    /*mainVideo 主要影片 ▲▲▲ */
-
-
-    /*mainVideo 推薦熱門 ▼▼▼ */ 
-    /* .mainVideo-recommend, .mainVideo-recommend-bg {
-        display: none;
-    } */
-    /*mainVideo 推薦熱門 ▲▲▲ */
-
-
-    
+@media screen and (max-width: 1000px) {      
     /* Event ▼▼▼ */
     .event-carousel .owl-nav button.owl-next {
         margin-right: 50px;
